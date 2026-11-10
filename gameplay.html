@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ระบบเกม · CollegeLifeSim</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="แผนที่ ระบบหลัก ร้านค้า มินิเกม 7 แบบ และเกณฑ์เกรดของเกม CollegeLifeSim">
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="40" height="42"><b>CollegeLifeSim</b></a>
+    <div class="clock" aria-label="นาฬิกาในเกม 1 นาทีในเกมเท่ากับ 1 วินาทีจริง" title="นาฬิกาในเกม: 1 นาทีในเกม = 1 วินาทีจริง"><span class="day">จันทร์</span><span class="time">06:00</span></div>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">เมนู</button>
+    <nav class="nav" id="nav" aria-label="เมนูหลัก"><a href="index.html">หน้าแรก</a><a href="gameplay.html" aria-current="page">ระบบเกม</a><a href="howto.html">วิธีเล่น</a><a href="gallery.html">ภาพในเกม</a><a href="download.html">ดาวน์โหลด</a><a href="about.html">ผู้จัดทำ</a></nav>
+  </div>
+</header>
+<main>
+<section class="page-head">
+  <div class="sun" aria-hidden="true" style="width:110px;height:110px;top:14px;right:10%"></div>
+  <div class="cloud c1" aria-hidden="true"></div>
+  <div class="wrap"><h1>ระบบเกม</h1><p>ทุกอย่างในเกมจำลองจากชีวิตนักศึกษาจริง ตั้งแต่ตารางเรียน ราคาอาหาร ไปจนถึงรถรับส่งตอนเย็น</p></div>
+  <div class="ground" aria-hidden="true"></div>
+</section>
+<div class="ground-section">
+  <div class="wrap">
+    <section class="panel" id="map">
+      <span class="label">แผนที่</span>
+      <h2>วิทยาลัยที่สร้างจากผังจริง</h2>
+      <p>แผนที่ทำเป็นโมเดล 3 มิติในโปรแกรม Blender ตามผังอาคารจริงของวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา แล้วเรนเดอร์เป็นภาพมุมสูงแบบเอียง (Isometric) และย่อระยะทางให้เดินถึงกันได้ในเวลาของเกม</p>
+      <ul class="clean">
+        <li><b>อาคาร 3</b> ห้องเรียน 3 ชั้น ที่เข้าเรียนตามตาราง</li>
+        <li><b>โรงอาหาร</b> ร้านอาหารมื้อเที่ยง</li>
+        <li><b>มินิมาร์ทและร้านชา</b> ขนม เครื่องดื่ม สมุด ปากกา</li>
+        <li><b>ลานหน้าเสาธง</b> จุดเข้าแถวตอนเช้า</li>
+        <li><b>โดมกิจกรรม</b> กิจกรรมเก็บขยะวันศุกร์</li>
+        <li><b>บ่อน้ำและจุดรถรับส่ง</b> พร้อมสถานที่ประกอบฉากอื่น ๆ</li>
+      </ul>
+    </section>
+
+    <section id="places">
+      <h2 class="on-grass">ที่ต่าง ๆ ในวิทยาลัย</h2>
+      <div class="grid-3">
+        <figure class="shot">
+  <button type="button" data-zoom="images/g01.jpg" data-caption="ภายในอาคาร 3" aria-label="ดูภาพใหญ่: ภายในอาคาร 3"><img src="images/g01.jpg" alt="ภายในอาคาร 3" width="1280" height="720" loading="lazy"></button>
+  <figcaption><b>ภายในอาคาร 3</b>เดินขึ้นลงบันได หาห้องเรียนตามตาราง เช่น ห้อง 3305</figcaption>
+</figure>
+        <figure class="shot">
+  <button type="button" data-zoom="images/g08.jpg" data-caption="เข้าแถวหน้าเสาธง" aria-label="ดูภาพใหญ่: เข้าแถวหน้าเสาธง"><img src="images/g08.jpg" alt="เข้าแถวหน้าเสาธง" width="1280" height="720" loading="lazy"></button>
+  <figcaption><b>เข้าแถวหน้าเสาธง</b>ต้องมาถึงก่อน 08.00 น. ถ้าทันจะขึ้นแจ้งเตือนว่าเรียบร้อย</figcaption>
+</figure>
+        <figure class="shot">
+  <button type="button" data-zoom="images/g10.jpg" data-caption="ร้านมินิมาร์ท" aria-label="ดูภาพใหญ่: ร้านมินิมาร์ท"><img src="images/g10.jpg" alt="ร้านมินิมาร์ท" width="1280" height="720" loading="lazy"></button>
+  <figcaption><b>ร้านมินิมาร์ท</b>ขนม เครื่องดื่ม สมุด ปากกา และของตกแต่งตัวละคร</figcaption>
+</figure>
+        <figure class="shot">
+  <button type="button" data-zoom="images/g11.jpg" data-caption="ร้านชาตาหนวด" aria-label="ดูภาพใหญ่: ร้านชาตาหนวด"><img src="images/g11.jpg" alt="ร้านชาตาหนวด" width="1280" height="720" loading="lazy"></button>
+  <figcaption><b>ร้านชาตาหนวด</b>ชาไทย ชาเขียว โกโก้ และขนมไข่มุก ช่วยลดความเหนื่อย</figcaption>
+</figure>
+        <figure class="shot">
+  <button type="button" data-zoom="images/g12.jpg" data-caption="โทรศัพท์ในเกม" aria-label="ดูภาพใหญ่: โทรศัพท์ในเกม"><img src="images/g12.jpg" alt="โทรศัพท์ในเกม" width="1280" height="720" loading="lazy"></button>
+  <figcaption><b>โทรศัพท์ในเกม</b>ฝากถอนเงินกับธนาคาร และโทรให้แม่มารับหลังรถออก</figcaption>
+</figure>
+        <figure class="shot">
+  <button type="button" data-zoom="images/g13.jpg" data-caption="จุดรถรับส่ง" aria-label="ดูภาพใหญ่: จุดรถรับส่ง"><img src="images/g13.jpg" alt="จุดรถรับส่ง" width="1280" height="720" loading="lazy"></button>
+  <figcaption><b>จุดรถรับส่ง</b>กด E เพื่อขึ้นรถกลับบ้านและจบวัน</figcaption>
+</figure>
+      </div>
+    </section>
+
+    <section id="systems">
+      <h2 class="on-grass">ระบบหลักของเกม</h2>
+      <div class="grid-2"><div class="sign"><h3>ระบบเวลา</h3><p>1 นาทีในเกมเท่ากับ 1 วินาทีจริง วันละ 06.00 ถึง 24.00 น. พักเที่ยงเวลาเดินช้าลง 2 เท่า และหยุดเดินตอนทำมินิเกม</p></div>
+<div class="sign"><h3>ระบบเงิน</h3><p>เริ่มต้น 100 บาท หาเพิ่มได้จากการทำงานในวิทยาลัยและเงินรางวัลมินิเกม</p></div>
+<div class="sign"><h3>ความหิวและแรง</h3><p>หลอดความหิวลดลงตามเวลา ถ้าหมดจะเดินช้าลงครึ่งหนึ่ง เดินต่อเนื่องนาน ๆ จะหมดแรง ต้องพักหรือดื่มน้ำ</p></div>
+<div class="sign"><h3>ร้านค้า</h3><p>โรงอาหาร มินิมาร์ท และร้านชา ขายอาหาร เครื่องดื่ม สมุด และปากกาที่ต้องมีไว้ใช้ในคาบเรียน</p></div>
+<div class="sign"><h3>ภารกิจ</h3><p>บอกว่าต้องไปห้องไหนตามตารางเรียน และให้กดที่โต๊ะเรียนเพื่อทำงาน</p></div>
+<div class="sign"><h3>เข้าแถวและกลับบ้าน</h3><p>เข้าแถวก่อน 08.00 น. หลังเลิกเรียนรถรับส่งรอ 30 นาที ไม่ทันเสีย 10 บาทให้แม่มารับ</p></div>
+<div class="sign"><h3>บันทึกเกม</h3><p>บันทึกอัตโนมัติทุกต้นวัน และบันทึกเองได้อีก 3 ช่องจากเมนูหยุดเกม</p></div>
+<div class="sign"><h3>เหตุการณ์สุ่ม</h3><p>บางคาบครูจะเช็คชื่อกะทันหัน ต้องกดตอบให้ทันก่อนหมดเวลา</p></div>
+<div class="sign"><h3>โทรศัพท์และธนาคาร</h3><p>ฝากเงินเก็บไว้ได้ ถอนออกมาใช้เมื่อจำเป็น และโทรหาแม่ให้มารับได้</p></div>
+<div class="sign"><h3>คะแนนและเกรด</h3><p>ทำงานรายวิชาสำเร็จได้ 10 คะแนน ขาดเรียนหรือเข้าแถวไม่ทันถูกหักคะแนน แล้วสรุปเป็นเกรดตอนจบ</p></div></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <span class="label">ร้านค้า</span>
+        <h2>เมนูโรงอาหาร</h2>
+        <p>เงินมีแค่ 100 บาท ต้องเลือกให้ดีว่าจะอิ่มมากหรือเก็บเงินไว้ซื้อของใช้ในคาบ</p>
+        <div class="shop-row"><div><b>ก๋วยเตี๋ยว</b><small>อิ่มมาก ความหิวเพิ่ม 60</small></div><span class="price">45</span><span class="buy">ซื้อ</span></div>
+        <div class="shop-row"><div><b>ข้าวไข่เจียว</b><small>อิ่มพอดี ความหิวเพิ่ม 40</small></div><span class="price">30</span><span class="buy">ซื้อ</span></div>
+        <div class="shop-row"><div><b>ชาเย็น</b><small>เก็บไว้ดื่ม ลดความเหนื่อย 35</small></div><span class="price">15</span><span class="buy">ซื้อ</span></div>
+      </div>
+      <figure class="shot">
+  <button type="button" data-zoom="images/shot5.jpg" data-caption="หน้าร้านในโรงอาหาร" aria-label="ดูภาพใหญ่: หน้าร้านในโรงอาหาร"><img src="images/shot5.jpg" alt="หน้าร้านในโรงอาหาร" width="1280" height="720" loading="lazy"></button>
+  <figcaption><b>หน้าร้านในโรงอาหาร</b>ราคาและผลของอาหารแต่ละอย่างแสดงก่อนซื้อ</figcaption>
+</figure>
+    </section>
+
+    <section id="minigames">
+      <h2 class="on-grass">มินิเกมประจำรายวิชา 7 แบบ</h2>
+      <div class="panel" style="margin-bottom:22px"><p style="margin:0">กดที่โต๊ะเรียนในห้องเพื่อเริ่มมินิเกม ระหว่างเล่นนาฬิกาในเกมจะหยุด ถ้ายอมแพ้ก็กลับมาเล่นใหม่ได้ตราบที่ยังไม่หมดคาบ</p></div>
+      <div class="mini-grid"><article class="mini-card"><button type="button" class="mini-img" data-zoom="images/g02.jpg" data-caption="มินิเกมกดให้ตรงจังหวะ" aria-label="ดูภาพใหญ่: มินิเกมกดให้ตรงจังหวะ"><img src="images/g02.jpg" alt="ภาพมินิเกมกดให้ตรงจังหวะ" width="1280" height="720" loading="lazy"><span class="no">1/7</span></button><div class="mini-body"><h3>กดให้ตรงจังหวะ</h3><p class="subj">วิชาที่เน้นฟังบรรยายและเขียนงาน</p><p>ตัวชี้วิ่งไปมาบนแถบ กดตอนตัวชี้อยู่ในช่วงสีเขียวให้ได้ 6 ครั้ง กดพลาดหลอดความคืบหน้าจะลดลง</p></div></article>
+<article class="mini-card"><button type="button" class="mini-img" data-zoom="images/shot4.jpg" data-caption="มินิเกมลากชิ้นส่วนใส่ช่อง" aria-label="ดูภาพใหญ่: มินิเกมลากชิ้นส่วนใส่ช่อง"><img src="images/shot4.jpg" alt="ภาพมินิเกมลากชิ้นส่วนใส่ช่อง" width="1280" height="720" loading="lazy"><span class="no">2/7</span></button><div class="mini-body"><h3>ลากชิ้นส่วนใส่ช่อง</h3><p class="subj">วิชาโปรแกรมกราฟิก</p><p>ลากชิ้นส่วนภาพ 5 ชิ้นไปวางในช่องเงาที่ตรงกัน วางผิดช่องชิ้นส่วนจะเด้งกลับ</p></div></article>
+<article class="mini-card"><button type="button" class="mini-img" data-zoom="images/g03.jpg" data-caption="มินิเกมข้อสอบเลือกตอบ" aria-label="ดูภาพใหญ่: มินิเกมข้อสอบเลือกตอบ"><img src="images/g03.jpg" alt="ภาพมินิเกมข้อสอบเลือกตอบ" width="1280" height="720" loading="lazy"><span class="no">3/7</span></button><div class="mini-body"><h3>ข้อสอบเลือกตอบ</h3><p class="subj">วิชาทักษะการเขียนและการพูดภาษาไทย</p><p>สุ่มโจทย์ 5 ข้อ ตัวเลือก ก ข ค ง ตอบผิดเลือกใหม่ได้ไม่จำกัด</p></div></article>
+<article class="mini-card"><button type="button" class="mini-img" data-zoom="images/g04.jpg" data-caption="มินิเกมเลือกคำให้ถูก" aria-label="ดูภาพใหญ่: มินิเกมเลือกคำให้ถูก"><img src="images/g04.jpg" alt="ภาพมินิเกมเลือกคำให้ถูก" width="1280" height="720" loading="lazy"><span class="no">4/7</span></button><div class="mini-body"><h3>เลือกคำให้ถูก</h3><p class="subj">วิชาการเขียนโปรแกรมเชิงวัตถุ และวิชาโครงงาน</p><p>จำลองหน้าจอ Dev-C++ และ Microsoft Word เลือกคำที่ถูกจาก 3 ตัวเลือก ครบ 5 ข้อ มีคำใบ้ภาษาไทยทุกข้อ</p></div></article>
+<article class="mini-card"><button type="button" class="mini-img" data-zoom="images/g05.jpg" data-caption="มินิเกมพิมพ์พรอมต์" aria-label="ดูภาพใหญ่: มินิเกมพิมพ์พรอมต์"><img src="images/g05.jpg" alt="ภาพมินิเกมพิมพ์พรอมต์" width="1280" height="720" loading="lazy"><span class="no">5/7</span></button><div class="mini-body"><h3>พิมพ์พรอมต์</h3><p class="subj">วิชาการประยุกต์ AI สำหรับธุรกิจ</p><p>เลือกข้อความมาประกอบเป็นพรอมต์ แล้วดูผลลัพธ์ของ AI จำลองที่เปลี่ยนไปตามตัวเลือก</p></div></article>
+<article class="mini-card"><button type="button" class="mini-img" data-zoom="images/g06.jpg" data-caption="มินิเกมประกอบหน้าเว็บ" aria-label="ดูภาพใหญ่: มินิเกมประกอบหน้าเว็บ"><img src="images/g06.jpg" alt="ภาพมินิเกมประกอบหน้าเว็บ" width="1280" height="720" loading="lazy"><span class="no">6/7</span></button><div class="mini-body"><h3>ประกอบหน้าเว็บ</h3><p class="subj">วิชาการพัฒนาเว็บไซต์ทางธุรกิจ</p><p>จำลองหน้าจอ Google Sites เลือกส่วนประกอบหน้าเว็บให้ตรงโจทย์ทีละส่วนจากบนลงล่าง ครบ 5 ส่วนได้เว็บที่สมบูรณ์</p></div></article>
+<article class="mini-card"><button type="button" class="mini-img" data-zoom="images/g09.jpg" data-caption="มินิเกมเก็บขยะ" aria-label="ดูภาพใหญ่: มินิเกมเก็บขยะ"><img src="images/g09.jpg" alt="ภาพมินิเกมเก็บขยะ" width="1280" height="720" loading="lazy"><span class="no">7/7</span></button><div class="mini-body"><h3>เก็บขยะ</h3><p class="subj">กิจกรรมองค์การวิชาชีพ วันศุกร์</p><p>ขยะ 10 จุดสุ่มรอบโดมกิจกรรม เดินเก็บให้ครบก่อนหมดเวลา ได้ระดับ Perfect รับ 15 บาท Great รับ 8 บาท</p></div></article></div>
+    </section>
+
+    <section class="grid-2" id="grades">
+      <div class="panel">
+        <span class="label">จบสัปดาห์</span>
+        <h2>เกณฑ์เกรดตอนจบเกม</h2>
+        <div class="table-scroll"><table>
+<thead><tr><th>เกรด</th><th class="num">คะแนน</th><th>ความหมาย</th></tr></thead>
+<tbody><tr><td><span class="grade g-s">S</span></td><td class="num">100</td><td>นักศึกษาดีเด่น</td></tr>
+<tr><td><span class="grade">A</span></td><td class="num">85–99</td><td>ยอดเยี่ยม</td></tr>
+<tr><td><span class="grade">B</span></td><td class="num">65–84</td><td>ดีมาก</td></tr>
+<tr><td><span class="grade">C</span></td><td class="num">45–64</td><td>พอใช้</td></tr>
+<tr><td><span class="grade">D</span></td><td class="num">25–44</td><td>ต้องปรับปรุง</td></tr>
+<tr><td><span class="grade g-f">F</span></td><td class="num">ต่ำกว่า 25</td><td>ต้องพยายามใหม่</td></tr></tbody></table></div>
+      </div>
+      <div class="panel">
+        <span class="label">สะสม</span>
+        <h2>ฉากจบและความสำเร็จ</h2>
+        <p>เมื่อครบ 5 วัน เกมจะสรุปคะแนนรวมจาก 100 คะแนน ให้เกรด และแสดงผลรายวิชาของวันจันทร์ถึงวันศุกร์ ฉากจบที่เคยได้จะเก็บไว้ในเมนู <b>สะสมฉากจบ</b> ลองเล่นหลายแบบเพื่อปลดล็อกให้ครบ</p>
+        <p>ลองเล่นแบบเรียนครบทุกคาบ แบบใช้เงินหมดตั้งแต่เช้า หรือแบบเข้าแถวไม่ทัน แล้วดูว่าตอนจบเปลี่ยนไปอย่างไร</p>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="ดูภาพขยาย">
+  <button class="btn light close" type="button">ปิด</button>
+  <figure><img src="" alt=""><figcaption></figcaption>
+    <div class="nav-arrows"><button class="btn light prev" type="button">ก่อนหน้า</button><button class="btn light next" type="button">ถัดไป</button></div>
+  </figure>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div><b>CollegeLifeSim</b> · เกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา · Demo 1.0.4</div>
+    <div>โครงงานนักศึกษา ปวส. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล ห้อง สบค.11 · วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ต.ไพรพัฒนา อ.ภูสิงห์ จ.ศรีสะเกษ</div>
+    <div>ผู้จัดทำ: นายอัษฎาวุฒิ รัตนพันธ์ · นายวราวุธ ธิวะโต · นางสาวสใบทิพย์ แสงเพ็ง</div>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CollegeLifeSim เกมจำลองการใช้ชีวิตในวิทยาลัย</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="เกมจำลองชีวิตนักศึกษาวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา 5 วัน เล่นฟรีบน Windows และ Android">
+<link rel="icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="40" height="42"><b>CollegeLifeSim</b></a>
+    <div class="clock" aria-label="นาฬิกาในเกม 1 นาทีในเกมเท่ากับ 1 วินาทีจริง" title="นาฬิกาในเกม: 1 นาทีในเกม = 1 วินาทีจริง"><span class="day">จันทร์</span><span class="time">06:00</span></div>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">เมนู</button>
+    <nav class="nav" id="nav" aria-label="เมนูหลัก"><a href="index.html" aria-current="page">หน้าแรก</a><a href="gameplay.html">ระบบเกม</a><a href="howto.html">วิธีเล่น</a><a href="gallery.html">ภาพในเกม</a><a href="download.html">ดาวน์โหลด</a><a href="about.html">ผู้จัดทำ</a></nav>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="cloud c1" aria-hidden="true"></div>
+  <div class="cloud c2" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-text">
+      <div class="logo-row">
+        <img src="images/logo.png" alt="โลโก้เกม CollegeLifeSim หมวกบัณฑิตบนหนังสือ" width="360" height="378">
+        <div>
+          <h1 class="game-title">CollegeLifeSim</h1>
+          <p class="game-sub">เกมจำลองการใช้ชีวิตในวิทยาลัย</p>
+        </div>
+      </div>
+      <div class="panel">
+        <p class="lead">ใช้ชีวิตเป็นนักศึกษา <em>วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</em> 1 สัปดาห์ เข้าแถว เข้าเรียน ทำมินิเกมประจำวิชา หาของกิน แล้วลุ้นเกรดตอนจบสัปดาห์!</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn big green" href="download.html">ดาวน์โหลดฟรี</a>
+        <a class="btn big" href="howto.html">วิธีเล่น</a>
+      </div>
+    </div>
+    <img class="student" src="images/student.png" alt="ตัวละครนักศึกษาชายในชุดนักศึกษา" width="284" height="820">
+  </div>
+  <div class="ground" aria-hidden="true"></div>
+</section>
+
+<div class="ground-section">
+  <div class="wrap">
+    <div class="hud" role="list">
+      <div class="panel" role="listitem"><b>5 วัน</b><span>จันทร์ถึงศุกร์</span></div>
+      <div class="panel" role="listitem"><b>100 บาท</b><span>เงินเริ่มต้น</span></div>
+      <div class="panel" role="listitem"><b>7 แบบ</b><span>มินิเกมตามวิชาเรียน</span></div>
+      <div class="panel" role="listitem"><b>S – F</b><span>เกรดตอนจบสัปดาห์</span></div>
+    </div>
+
+    <section class="panel">
+      <span class="label">เกมนี้คืออะไร</span>
+      <h2>ชีวิตนักศึกษา ที่ต้องจัดการเอง</h2>
+      <p>CollegeLifeSim เป็นเกมจำลองชีวิต 2 มิติ มุมมองจากด้านบน ผู้เล่นรับบทนักศึกษาที่ต้องใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ให้ครบ 5 วัน ต้องเข้าแถวให้ทัน เดินไปห้องเรียนตามตารางเรียนจริง ทำงานในคาบให้สำเร็จ ดูแลความหิวกับแรงของตัวละคร และใช้เงิน 100 บาทให้พอทั้งวัน</p>
+      <p>แผนที่ในเกมจำลองจากผังจริงของวิทยาลัย ทั้งอาคาร 3 โรงอาหาร มินิมาร์ท โดมกิจกรรม และจุดรถรับส่ง คนที่เรียนอยู่ที่นี่จะเห็นแล้วจำได้ทันที เล่นได้ทั้งบนคอมพิวเตอร์ Windows และมือถือ Android</p>
+    </section>
+
+    <section>
+      <h2 class="on-grass">หนึ่งวันในวิทยาลัย</h2>
+      <div class="panel">
+        <ol class="day-line">
+          <li><time>06:00</time><div><strong>เริ่มวันใหม่</strong><p>เกมบันทึกให้อัตโนมัติทุกต้นวัน ดูภารกิจที่มุมซ้ายบนว่าวันนี้ต้องไปไหน</p></div></li>
+          <li><time>08:00</time><div><strong>เข้าแถวหน้าเสาธง</strong><p>ต้องไปถึงก่อน 8 โมง ถ้าสายจะถูกหักคะแนน</p></div></li>
+          <li><time>คาบเช้า</time><div><strong>เข้าห้องตามตารางเรียน</strong><p>เดินไปห้องที่ภารกิจบอก กดที่โต๊ะเรียนเพื่อเริ่มมินิเกมของวิชานั้น</p></div></li>
+          <li><time>พักเที่ยง</time><div><strong>หาอะไรกิน</strong><p>เวลาช่วงพักเที่ยงเดินช้าลง 2 เท่า แวะโรงอาหาร มินิมาร์ท หรือร้านชาได้</p></div></li>
+          <li><time>คาบบ่าย</time><div><strong>เรียนต่อให้ครบ</strong><p>ขาดเรียนเสียคะแนน ทำงานในคาบสำเร็จได้ 10 คะแนน</p></div></li>
+          <li><time>เลิกเรียน</time><div><strong>ขึ้นรถรับส่งกลับบ้าน</strong><p>รถรอแค่ 30 นาที ถ้าไม่ทันต้องจ่าย 10 บาทให้แม่มารับ</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid-2">
+        <a class="sign" href="howto.html#create" style="text-decoration:none"><h3>สร้างตัวละครได้ตามใจ</h3><p>ตั้งชื่อ เลือกเพศ ทรงผม สี ใบหน้า และของตกแต่ง</p></a>
+        <a class="sign" href="gameplay.html#minigames" style="text-decoration:none"><h3>มินิเกมตามวิชาเรียนจริง</h3><p>ตั้งแต่โปรแกรมกราฟิก เขียนโปรแกรม ไปจนถึง AI สำหรับธุรกิจ</p></a>
+        <a class="sign" href="gameplay.html#systems" style="text-decoration:none"><h3>จัดการเงิน แรง และความหิว</h3><p>หิวมากจะเดินช้าลงครึ่งหนึ่ง เดินนานเกินไปก็หมดแรง</p></a>
+        <a class="sign" href="gameplay.html#grades" style="text-decoration:none"><h3>สะสมฉากจบและความสำเร็จ</h3><p>สรุปคะแนนจาก 100 แล้วให้เกรด S ถึง F ตอนจบสัปดาห์</p></a>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="on-grass">ภาพจากในเกม</h2>
+      <div class="grid-3">
+        <figure class="shot">
+  <button type="button" data-zoom="images/shot3.jpg" data-caption="เดินสำรวจวิทยาลัย" aria-label="ดูภาพใหญ่: เดินสำรวจวิทยาลัย"><img src="images/shot3.jpg" alt="เดินสำรวจวิทยาลัย" width="1280" height="720" loading="lazy"></button>
+  <figcaption><b>เดินสำรวจวิทยาลัย</b>ภารกิจ แผนที่ย่อ เวลา เงิน แรงและความหิว อยู่บนจอครบ</figcaption>
+</figure>
+        <figure class="shot">
+  <button type="button" data-zoom="images/g08.jpg" data-caption="เข้าแถวหน้าเสาธง" aria-label="ดูภาพใหญ่: เข้าแถวหน้าเสาธง"><img src="images/g08.jpg" alt="เข้าแถวหน้าเสาธง" width="1280" height="720" loading="lazy"></button>
+  <figcaption><b>เข้าแถวหน้าเสาธง</b>มาให้ทันก่อน 08.00 น. ทุกเช้า</figcaption>
+</figure>
+        <figure class="shot">
+  <button type="button" data-zoom="images/shot6.jpg" data-caption="สรุปผลจบสัปดาห์" aria-label="ดูภาพใหญ่: สรุปผลจบสัปดาห์"><img src="images/shot6.jpg" alt="สรุปผลจบสัปดาห์" width="1280" height="720" loading="lazy"></button>
+  <figcaption><b>สรุปผลจบสัปดาห์</b>คะแนนรวม เกรด และผลรายวิชาของแต่ละวัน</figcaption>
+</figure>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="on-grass">มินิเกมในคาบเรียน</h2>
+      <div class="mini-strip">
+        <a href="gameplay.html#minigames"><img src="images/g02.jpg" alt="มินิเกมกดให้ตรงจังหวะ" width="1280" height="720" loading="lazy"><span>กดให้ตรงจังหวะ</span></a>
+        <a href="gameplay.html#minigames"><img src="images/shot4.jpg" alt="มินิเกมลากชิ้นส่วนใส่ช่อง" width="1280" height="720" loading="lazy"><span>ลากชิ้นส่วนใส่ช่อง</span></a>
+        <a href="gameplay.html#minigames"><img src="images/g03.jpg" alt="มินิเกมข้อสอบเลือกตอบ" width="1280" height="720" loading="lazy"><span>ข้อสอบเลือกตอบ</span></a>
+        <a href="gameplay.html#minigames"><img src="images/g04.jpg" alt="มินิเกมเลือกคำให้ถูก" width="1280" height="720" loading="lazy"><span>เลือกคำให้ถูก</span></a>
+        <a href="gameplay.html#minigames"><img src="images/g05.jpg" alt="มินิเกมพิมพ์พรอมต์" width="1280" height="720" loading="lazy"><span>พิมพ์พรอมต์ AI</span></a>
+        <a href="gameplay.html#minigames"><img src="images/g06.jpg" alt="มินิเกมประกอบหน้าเว็บ" width="1280" height="720" loading="lazy"><span>ประกอบหน้าเว็บ</span></a>
+        <a href="gameplay.html#minigames"><img src="images/g09.jpg" alt="กิจกรรมเก็บขยะ" width="1280" height="720" loading="lazy"><span>เก็บขยะรอบโดม</span></a>
+        <a class="more-tile" href="gameplay.html#minigames"><span>ดูรายละเอียดมินิเกมทั้ง 7 แบบ</span></a>
+      </div>
+      <p class="more" style="margin-top:16px"><a class="btn light" href="gallery.html">ดูภาพทั้งหมด</a></p>
+    </section>
+
+    <section class="panel cta-band">
+      <div><h2>พร้อมเปิดเทอมหรือยัง?</h2><p>ดาวน์โหลดฟรี Demo 1.0.4 สำหรับ Windows และ Android</p></div>
+      <a class="btn big green" href="download.html">ไปหน้าดาวน์โหลด</a>
+    </section>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="ดูภาพขยาย">
+  <button class="btn light close" type="button">ปิด</button>
+  <figure><img src="" alt=""><figcaption></figcaption>
+    <div class="nav-arrows"><button class="btn light prev" type="button">ก่อนหน้า</button><button class="btn light next" type="button">ถัดไป</button></div>
+  </figure>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div><b>CollegeLifeSim</b> · เกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา · Demo 1.0.4</div>
+    <div>โครงงานนักศึกษา ปวส. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล ห้อง สบค.11 · วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ต.ไพรพัฒนา อ.ภูสิงห์ จ.ศรีสะเกษ</div>
+    <div>ผู้จัดทำ: นายอัษฎาวุฒิ รัตนพันธ์ · นายวราวุธ ธิวะโต · นางสาวสใบทิพย์ แสงเพ็ง</div>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
