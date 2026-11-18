@@ -276,24 +276,32 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 
 .logo-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 18px;
+  gap: 14px 18px;
   margin-bottom: 14px;
 }
 .logo-row img {
-  width: clamp(78px, 11vw, 112px);
+  width: clamp(76px, 10vw, 108px);
+  height: auto;
+  flex-shrink: 0;
   image-rendering: pixelated;
   filter: drop-shadow(0 6px 0 rgba(59, 31, 9, 0.4));
 }
 .logo-row img.seal-img {
   image-rendering: auto;
 }
+.logo-row > div {
+  flex: 1 1 300px;
+  min-width: 0;
+  max-width: 100%;
+}
 .game-title {
   font-family: var(--f-display);
   font-weight: 800;
   margin: 0;
-  line-height: 0.98;
-  font-size: clamp(40px, 6.2vw, 76px);
+  line-height: 1.05;
+  font-size: clamp(30px, 5.2vw, 68px);
   color: var(--white);
   text-shadow:
     3px 3px 0 var(--wood-deep),
@@ -302,20 +310,22 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
     -3px -3px 0 var(--wood-deep),
     0 7px 0 var(--wood-deep);
   letter-spacing: -0.5px;
+  overflow-wrap: anywhere;
 }
 .game-sub {
   font-family: var(--f-display);
   font-weight: 700;
-  font-size: clamp(20px, 2.6vw, 28px);
+  font-size: clamp(18px, 2.3vw, 26px);
   color: var(--gold);
   margin: 6px 0 0;
-  line-height: 1.25;
+  line-height: 1.3;
   text-shadow:
     2px 2px 0 var(--wood-deep),
     -2px 2px 0 var(--wood-deep),
     2px -2px 0 var(--wood-deep),
     -2px -2px 0 var(--wood-deep),
     0 4px 0 var(--wood-deep);
+  overflow-wrap: anywhere;
 }
 .game-en-title {
   font-family: var(--f-ui);
@@ -324,6 +334,25 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
   text-shadow: 1px 1px 0 var(--wood-deep);
   margin: 6px 0 0;
   opacity: 0.95;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 680px) {
+  .logo-row {
+    gap: 10px 14px;
+  }
+  .logo-row img {
+    width: 74px;
+  }
+  .logo-row > div {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .game-title {
+    font-size: clamp(30px, 8.8vw, 42px);
+  }
+  .game-sub {
+    font-size: clamp(17.5px, 4.6vw, 22px);
+  }
 }
 
 .hero-actions {
@@ -358,6 +387,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 }
 .hero-card-caption {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
@@ -414,7 +444,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 }
 
 @media (max-width: 900px) {
-  .hero .wrap { grid-template-columns: 1fr; }
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); }
   .student-float { width: 72px; right: 8px; bottom: 42px; }
 }
 
