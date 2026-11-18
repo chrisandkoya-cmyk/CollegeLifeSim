@@ -1,100 +1,394 @@
 <!doctype html>
 <html lang="th">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ผู้จัดทำ · CollegeLifeSim</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="ทีมผู้จัดทำ ผลประเมิน และเครดิตของเกม CollegeLifeSim">
-<link rel="icon" href="images/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600&display=swap">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ผู้จัดทำและเล่มโครงงาน — CollegeLifeSim เกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</title>
+  <meta name="description" content="ข้อมูลรายงานโครงงานฉบับสมบูรณ์ 5 บท บทคัดย่อ วัตถุประสงค์ ผลการประเมินความพึงพอใจ (X̄ = 4.50, S.D. = 0.73) และประวัติคณะผู้จัดทำโครงงาน ห้อง สบค.11 วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="40" height="42"><b>CollegeLifeSim</b></a>
-    <div class="clock" aria-label="นาฬิกาในเกม 1 นาทีในเกมเท่ากับ 1 วินาทีจริง" title="นาฬิกาในเกม: 1 นาทีในเกม = 1 วินาทีจริง"><span class="day">จันทร์</span><span class="time">06:00</span></div>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">เมนู</button>
-    <nav class="nav" id="nav" aria-label="เมนูหลัก"><a href="index.html">หน้าแรก</a><a href="gameplay.html">ระบบเกม</a><a href="howto.html">วิธีเล่น</a><a href="gallery.html">ภาพในเกม</a><a href="download.html">ดาวน์โหลด</a><a href="about.html" aria-current="page">ผู้จัดทำ</a></nav>
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" width="42" height="42" alt="โลโก้เกม CollegeLifeSim">
+      <div class="brand-text">
+        <b>CollegeLifeSim</b>
+        <small>วท.หลวงปู่สรวงวัดไพรพัฒนา · สบค.11</small>
+      </div>
+    </a>
+    <div class="clock" title="เวลาในเกมจำลอง (1 นาทีในเกม = 1 วินาทีจริง)">
+      <span class="day">จันทร์</span>
+      <span class="time">08:15</span>
+    </div>
+    <button class="menu-btn" type="button" aria-expanded="false">☰ เมนู</button>
+    <nav class="nav" aria-label="เมนูหลัก">
+      <a href="index.html">หน้าแรก</a>
+      <a href="gameplay.html">ระบบเกม</a>
+      <a href="howto.html">วิธีเล่น</a>
+      <a href="gallery.html">ภาพและเทรลเลอร์</a>
+      <a href="download.html" class="nav-cta">ดาวน์โหลด</a>
+      <a href="about.html" aria-current="page">ผู้จัดทำและเล่มโครงงาน</a>
+    </nav>
   </div>
 </header>
-<main>
+
 <section class="page-head">
-  <div class="sun" aria-hidden="true" style="width:110px;height:110px;top:14px;right:10%"></div>
+  <div class="sun" aria-hidden="true"></div>
   <div class="cloud c1" aria-hidden="true"></div>
-  <div class="wrap"><h1>ผู้จัดทำ</h1><p>โครงงานพัฒนาเกมของนักศึกษา ปวส. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล</p></div>
+  <div class="wrap">
+    <span class="badge maroon">PROJECT REPORT &amp; CREATORS · รายงานโครงงานฉบับสมบูรณ์</span>
+    <h1>ข้อมูลเล่มโครงงานและคณะผู้จัดทำ</h1>
+    <p>สรุปเนื้อหาตามรูปเล่มรายงานโครงงาน 5 บท ผลการประเมินความพึงพอใจ และประวัติคณะผู้จัดทำ นักศึกษาระดับชั้น ปวส. ห้อง สบค.11</p>
+  </div>
   <div class="ground" aria-hidden="true"></div>
 </section>
-<div class="ground-section">
+
+<main class="ground-section">
   <div class="wrap">
-    <section class="panel">
-      <span class="label">โครงงาน</span>
-      <h2>เกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</h2>
-      <p lang="en" style="font-family:var(--f-ui);color:var(--ink-soft)">CollegeLifeSim: A College Life Simulation Game of Luang Pu Suang Wat Phrai Phatthana Technological College</p>
-      <p>นักศึกษาหลายคนยังวางแผนเวลาและการใช้เงินไม่ค่อยได้ ทำให้เข้าเรียนสาย ส่งงานไม่ทัน หรือใช้เงินหมดก่อนมื้อเที่ยง ผู้จัดทำจึงสร้างเกมที่ให้ผู้เล่นได้ลองตัดสินใจในสถานการณ์ที่ใกล้ตัว แล้วเห็นผลของการเลือกด้วยตัวเอง ผ่านระบบคะแนนและเกรดตอนจบเกม</p>
-      <h3 style="font-family:var(--f-ui);font-weight:500;margin:18px 0 6px">วัตถุประสงค์</h3>
-      <ol class="steps">
-        <li>เพื่อพัฒนาเกมจำลองการใช้ชีวิตในวิทยาลัย ให้ทำงานบนระบบปฏิบัติการแอนดรอยด์ได้</li>
-        <li>เพื่อศึกษากระบวนการพัฒนาเกมบนอุปกรณ์พกพาด้วยโปรแกรม Godot Engine 4 และภาษา GDScript</li>
-        <li>เพื่อศึกษาความพึงพอใจของผู้เล่นที่มีต่อเกม</li>
-      </ol>
-      <p style="margin-top:14px">ระยะเวลาดำเนินงาน 5 ตุลาคม 2569 ถึง 4 มกราคม 2570 ณ วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ตำบลไพรพัฒนา อำเภอภูสิงห์ จังหวัดศรีสะเกษ</p>
+
+    <!-- ข้อมูลหน้าปกและบทคัดย่อ -->
+    <section class="panel maroon-frame">
+      <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 2px solid #ecd39d;">
+        <img src="images/college-seal.png" width="88" height="88" alt="ตราประจำวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา">
+        <div>
+          <span class="label maroon">ข้อมูลประจำเล่มโครงงาน · ปีการศึกษา 2569</span>
+          <h2 style="margin: 0; color: var(--maroon);">เกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</h2>
+          <p style="margin: 4px 0 0; font-family: var(--f-ui); color: var(--ink-soft);">
+            <b>ชื่อภาษาอังกฤษ:</b> CollegeLifeSim: A College Life Simulation Game of Luang Pu Suang Wat Phrai Phatthana Technological College<br>
+            <b>ระดับชั้น:</b> ประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) ห้อง สบค.11 · <b>สาขาวิชา:</b> เทคโนโลยีธุรกิจดิจิทัล · <b>สถานศึกษา:</b> วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา
+          </p>
+        </div>
+      </div>
+
+      <h3 style="font-family: var(--f-display); font-size: 22px; margin: 0 0 8px; color: var(--ink);">บทคัดย่อ (Abstract)</h3>
+      <p style="margin-top: 0;">
+        โครงงานพัฒนาเกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา มีวัตถุประสงค์ 1) เพื่อพัฒนาเกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ให้ทำงานบนระบบปฏิบัติการแอนดรอยด์ได้ 2) เพื่อศึกษากระบวนการพัฒนาเกมบนอุปกรณ์พกพาด้วยโปรแกรม Godot Engine 4 และภาษา GDScript และ 3) เพื่อศึกษาความพึงพอใจของผู้เล่นที่มีต่อเกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา
+      </p>
+      <p style="margin-bottom: 0;">
+        กลุ่มตัวอย่างที่ใช้ในการศึกษาครั้งนี้ ได้แก่ นักศึกษาระดับชั้นประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.) สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา จำนวน 27 คน เครื่องมือที่ใช้ในการเก็บรวบรวมข้อมูลคือแบบสอบถามความพึงพอใจมาตราส่วนประมาณค่า 5 ระดับ จำนวน 6 ด้าน รวม 12 ข้อ สถิติที่ใช้ในการวิเคราะห์ข้อมูล ได้แก่ ค่าร้อยละ ค่าเฉลี่ย ($\bar{X}$) และส่วนเบี่ยงเบนมาตรฐาน (S.D.) <strong>ผลการศึกษาพบว่า</strong> เกมที่พัฒนาขึ้นสามารถทำงานบนระบบปฏิบัติการแอนดรอยด์และคอมพิวเตอร์ได้อย่างสมบูรณ์ และผู้เล่นมีความพึงพอใจโดยรวมอยู่ใน<strong>ระดับมาก ($\bar{X} = 4.50$, S.D. = 0.73) คิดเป็นร้อยละ 90.00</strong> ซึ่งสูงกว่าเกณฑ์ที่กำหนดไว้ร้อยละ 70
+      </p>
     </section>
 
+    <!-- คณะผู้จัดทำโครงงาน (3 คน พร้อมรูปจริงและรหัสนักศึกษาเต็มคำ) -->
     <section>
-      <h2 class="on-grass">ทีมผู้จัดทำ</h2>
-      <div class="grid-3">
-        <div class="panel person"><div class="avatar" aria-hidden="true">อ</div><div><b>นายอัษฎาวุฒิ รัตนพันธ์</b><span>ผู้จัดทำ · ปวส. ห้อง สบค.11</span></div></div>
-        <div class="panel person"><div class="avatar" aria-hidden="true">ว</div><div><b>นายวราวุธ ธิวะโต</b><span>ผู้จัดทำ · ปวส. ห้อง สบค.11</span></div></div>
-        <div class="panel person"><div class="avatar" aria-hidden="true">ส</div><div><b>นางสาวสใบทิพย์ แสงเพ็ง</b><span>ผู้จัดทำ · ปวส. ห้อง สบค.11</span></div></div>
+      <div class="sec-head">
+        <div>
+          <span class="label">ภาคผนวก ช · ประวัติผู้จัดทำโครงงาน</span>
+          <h2 class="on-grass">คณะผู้จัดทำโครงงาน (นักศึกษาระดับชั้น ปวส. ห้อง สบค.11)</h2>
+          <p>สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ปีการศึกษา 2569</p>
+        </div>
       </div>
-      <div class="grid-2" style="margin-top:22px">
-        <div class="panel person"><div class="avatar" aria-hidden="true" style="background:var(--wood)">ป</div><div><b>นายประกิจจ์ ทองมา</b><span>ครูผู้สอน</span></div></div>
-        <div class="panel person"><div class="avatar" aria-hidden="true" style="background:var(--wood)">ด</div><div><b>นางสาวดวงดาว แสวงทรง</b><span>ครูที่ปรึกษา</span></div></div>
+
+      <div class="grid-3">
+        <article class="person-card">
+          <img class="person-photo" src="images/creator1.jpg" width="96" height="120" loading="lazy" alt="นายอัษฎาวุฒิ รัตนพันธ์">
+          <div class="person-info">
+            <b>1. นายอัษฎาวุฒิ รัตนพันธ์</b>
+            <span class="role-tag">ผู้จัดทำโครงงาน · หัวหน้าทีมพัฒนา</span>
+            <ul>
+              <li><b>รหัสนักศึกษา:</b> 69319100406</li>
+              <li><b>ระดับชั้น:</b> ปวส. ห้อง สบค.11</li>
+              <li><b>วันเกิด:</b> 25 ธันวาคม พ.ศ. 2550</li>
+              <li><b>ภูมิลำเนา:</b> ต.โคกตาล อ.ภูสิงห์ จ.ศรีสะเกษ</li>
+              <li><b>การศึกษา:</b> ม.ต้น รร.บ้านโคกตาล (2565) · ปวช. วท.หลวงปู่สรวงวัดไพรพัฒนา (2568)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img class="person-photo" src="images/creator2.jpg" width="96" height="120" loading="lazy" alt="นายวราวุธ ธิวะโต">
+          <div class="person-info">
+            <b>2. นายวราวุธ ธิวะโต</b>
+            <span class="role-tag">ผู้จัดทำโครงงาน · ออกแบบระบบและฉาก</span>
+            <ul>
+              <li><b>รหัสนักศึกษา:</b> 69319100403</li>
+              <li><b>ระดับชั้น:</b> ปวส. ห้อง สบค.11</li>
+              <li><b>วันเกิด:</b> 25 มิถุนายน พ.ศ. 2550</li>
+              <li><b>ภูมิลำเนา:</b> ต.ห้วยตึ๊กชู อ.ภูสิงห์ จ.ศรีสะเกษ</li>
+              <li><b>การศึกษา:</b> ม.ต้น รร.ศรีสะอาดวิทยาคม (2565) · ปวช. วท.หลวงปู่สรวงวัดไพรพัฒนา (2568)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img class="person-photo" src="images/creator3.jpg" width="96" height="120" loading="lazy" alt="นางสาวสใบทิพย์ แสงเพ็ง">
+          <div class="person-info">
+            <b>3. นางสาวสใบทิพย์ แสงเพ็ง</b>
+            <span class="role-tag">ผู้จัดทำโครงงาน · ข้อมูลและรูปเล่มรายงาน</span>
+            <ul>
+              <li><b>รหัสนักศึกษา:</b> 69319100390</li>
+              <li><b>ระดับชั้น:</b> ปวส. ห้อง สบค.11</li>
+              <li><b>วันเกิด:</b> 01 มิถุนายน พ.ศ. 2550</li>
+              <li><b>ภูมิลำเนา:</b> ต.ห้วยตึ๊กชู อ.ภูสิงห์ จ.ศรีสะเกษ</li>
+              <li><b>การศึกษา:</b> ม.ต้น รร.บ้านปราสาท (2565) · ปวช. วท.หลวงปู่สรวงวัดไพรพัฒนา (2568)</li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
 
+    <!-- ครูผู้สอน ครูที่ปรึกษาโครงงาน และผู้บริหารสถานศึกษา -->
+    <section>
+      <div class="sec-head">
+        <div>
+          <span class="label">กิตติกรรมประกาศและครูที่ปรึกษา</span>
+          <h2 class="on-grass">ครูผู้สอน ครูที่ปรึกษาโครงงาน และผู้บริหารสถานศึกษา</h2>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <article class="person-card">
+          <img class="person-photo" src="images/teacher2.jpg" width="96" height="120" loading="lazy" alt="นางสาวดวงดาว แสวงทรง">
+          <div class="person-info">
+            <b>นางสาวดวงดาว แสวงทรง</b>
+            <span class="role-tag advisor">ครูที่ปรึกษาโครงงาน</span>
+            <ul>
+              <li><b>ตำแหน่ง:</b> อาจารย์ประจำสาขาวิชาเทคโนโลยีธุรกิจดิจิทัล</li>
+              <li><b>สถานศึกษา:</b> วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</li>
+              <li><b>วุฒิการศึกษา:</b> ปริญญาตรี คอมพิวเตอร์ศึกษา คณะครุศาสตร์ มหาวิทยาลัยราชภัฏศรีสะเกษ (กำลังศึกษาต่อระดับปริญญาโท สาขาการบริหารการศึกษา มหาวิทยาลัยราชภัฏศรีสะเกษ)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="person-card">
+          <img class="person-photo" src="images/teacher1.jpg" width="96" height="120" loading="lazy" alt="นายประกิจจ์ ทองมา">
+          <div class="person-info">
+            <b>นายประกิจจ์ ทองมา</b>
+            <span class="role-tag advisor">ครูผู้สอนรายวิชาโครงงาน</span>
+            <ul>
+              <li><b>ตำแหน่ง:</b> อาจารย์ประจำสาขาวิชาเทคโนโลยีธุรกิจดิจิทัล</li>
+              <li><b>สถานศึกษา:</b> วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</li>
+              <li><b>วุฒิการศึกษา:</b> ปริญญาตรี ครุศาสตร์อุตสาหกรรม สาขาวิศวกรรมคอมพิวเตอร์และเทคโนโลยีคอมพิวเตอร์ มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตสุรินทร์</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="panel" style="margin-top: 18px;">
+        <div class="grid-2">
+          <div>
+            <b style="font-family: var(--f-display); font-size: 19px; color: var(--maroon);">หัวหน้าแผนกวิชาเทคโนโลยีธุรกิจดิจิทัล</b>
+            <p style="margin: 4px 0 0;"><b>นางสาวเนตรนภา ราชภักดี</b> — ผู้พิจารณาอนุมัติโครงงานและสนับสนุนการจัดการเรียนการสอน</p>
+          </div>
+          <div>
+            <b style="font-family: var(--f-display); font-size: 19px; color: var(--maroon);">ผู้อำนวยการวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</b>
+            <p style="margin: 4px 0 0;"><b>นายปรเมษฐ์ ศรีบูรณ์</b> — ผู้บริหารสถานศึกษาและสนับสนุนทรัพยากรในการดำเนินโครงงาน</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- บทที่ 1: วัตถุประสงค์ สมมุติฐาน ขอบเขต นิยามศัพท์ ประโยชน์ -->
     <section class="grid-2">
       <div class="panel">
-        <span class="label">ผลประเมิน</span>
-        <h2>ผู้เล่นพึงพอใจระดับมาก</h2>
-        <p>นักศึกษา ปวส. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล 27 คน ทดลองเล่นและตอบแบบสอบถาม ได้ค่าเฉลี่ยรวม <b>4.50</b> จาก 5 (S.D. 0.73) คิดเป็นประสิทธิภาพความพึงพอใจ <b>ร้อยละ 90</b></p>
-        <ul class="score-list">
-          <li><div class="row"><span>ความสะดวกในการใช้งาน</span><span>4.72</span></div><div class="bar"><i style="width:94.4%"></i></div></li>
-          <li><div class="row"><span>การควบคุมตัวละครและการเคลื่อนที่</span><span>4.57</span></div><div class="bar"><i style="width:91.4%"></i></div></li>
-          <li><div class="row"><span>ภาพรวมทุกด้าน</span><span>4.50</span></div><div class="bar"><i style="width:90%"></i></div></li>
-          <li><div class="row"><span>การทำงานของระบบเกม</span><span>4.33</span></div><div class="bar yellow"><i style="width:86.6%"></i></div></li>
+        <span class="label">บทที่ 1 · บทนำ</span>
+        <h2>วัตถุประสงค์ สมมุติฐาน และประโยชน์ที่คาดว่าจะได้รับ</h2>
+        <h3 style="font-family: var(--f-display); font-size: 19px; margin: 10px 0 6px; color: var(--maroon);">1.2 วัตถุประสงค์ของโครงงาน</h3>
+        <ol class="steps">
+          <li>เพื่อพัฒนาเกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ให้ทำงานบนระบบปฏิบัติการแอนดรอยด์ได้</li>
+          <li>เพื่อศึกษากระบวนการพัฒนาเกมบนอุปกรณ์พกพาด้วยโปรแกรม Godot Engine 4 และภาษา GDScript</li>
+          <li>เพื่อศึกษาความพึงพอใจของผู้เล่นที่มีต่อเกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</li>
+        </ol>
+
+        <h3 style="font-family: var(--f-display); font-size: 19px; margin: 14px 0 6px; color: var(--maroon);">1.3 สมมุติฐานของโครงงาน</h3>
+        <ol class="steps">
+          <li>เกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา สามารถติดตั้งและเล่นบนโทรศัพท์มือถือระบบปฏิบัติการแอนดรอยด์ได้อย่างสมบูรณ์</li>
+          <li>ผู้เล่นมีความพึงพอใจต่อเกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา อยู่ในระดับมาก ($\bar{X} \ge 3.51$)</li>
+          <li>ผลการประเมินความพึงพอใจของผู้เล่นมีค่าประสิทธิภาพไม่ต่ำกว่าร้อยละ 70</li>
+        </ol>
+
+        <h3 style="font-family: var(--f-display); font-size: 19px; margin: 14px 0 6px; color: var(--maroon);">1.6 ประโยชน์ที่คาดว่าจะได้รับ</h3>
+        <ul class="clean">
+          <li>ได้สื่อเกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ที่สามารถใช้งานได้จริงบนสมาร์ตโฟนแอนดรอยด์และคอมพิวเตอร์</li>
+          <li>ช่วยให้นักศึกษาใหม่และผู้สนใจได้เรียนรู้สถานที่ ตารางเรียน และการปรับตัวในรั้ววิทยาลัยผ่านสื่อที่สนุกสนาน</li>
+          <li>เป็นแนวทางและต้นแบบสำหรับนักศึกษารุ่นต่อไปในการพัฒนาเกมด้วยโปรแกรม Godot Engine 4</li>
         </ul>
-        <p style="font-size:15px;color:var(--ink-soft);margin-top:10px">ความยาวหลอดเทียบกับคะแนนเต็ม 5</p>
       </div>
+
       <div class="panel">
-        <span class="label">เครื่องมือ</span>
-        <h2>สร้างด้วยอะไร</h2>
-        <ul class="clean">
-          <li><b>Godot Engine 4.7</b> และภาษา <b>GDScript</b> สร้างเกมทั้งหมด</li>
-          <li><b>Blender</b> สร้างโมเดลอาคารและเรนเดอร์เป็นแผนที่</li>
-          <li><b>Aseprite</b> วาดและแก้ไขตัวละครพิกเซล</li>
-          <li><b>Android SDK และ JDK 17</b> ส่งออกเป็นไฟล์ APK</li>
+        <span class="label">บทที่ 1 และ บทที่ 3 · ขอบเขตและโครงสร้างโปรแกรม</span>
+        <h2>ขอบเขตโครงงานและโครงสร้างสคริปต์ (ตารางที่ 3.2)</h2>
+        <ul class="clean" style="margin-bottom: 14px;">
+          <li><b>ขอบเขตด้านเนื้อหา:</b> จำลองการใช้ชีวิตนักศึกษา 5 วันทำการ (จันทร์–ศุกร์ เวลา 06:00–16:30 น.) ครอบคลุม 9 คาบเรียน 1 กิจกรรมองค์การวิชาชีพ และมินิเกม 7 รูปแบบ</li>
+          <li><b>ขอบเขตด้านประชากรและกลุ่มตัวอย่าง:</b> นักศึกษาระดับชั้น ปวส. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ปีการศึกษา 2569 จำนวน 27 คน</li>
+          <li><b>ระยะเวลาดำเนินงาน:</b> เดือนพฤศจิกายน พ.ศ. 2568 – เดือนกุมภาพันธ์ พ.ศ. 2569 (รวม 16 สัปดาห์)</li>
         </ul>
-        <h3 style="font-family:var(--f-ui);font-weight:500;margin:18px 0 6px">เครดิตภาพและเสียง</h3>
-        <ul class="clean">
-          <li>ตัวละครต้นแบบ Top Down Character Walking Animation โดย andreecy (itch.io)</li>
-          <li>ภาพฉาก Tiny Town, Roguelike Indoors, RPG Urban Pack และเสียงเอฟเฟกต์ โดย Kenney (kenney.nl) สัญญาอนุญาต CC0</li>
-          <li>เพลงประกอบและเสียงบรรยากาศ ผู้จัดทำสร้างขึ้นเองด้วยโค้ด</li>
-        </ul>
+
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>ชื่อไฟล์สคริปต์</th>
+                <th>หน้าที่การทำงานหลัก (ตารางที่ 3.2)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>main.gd</code></td>
+                <td>ควบคุมระบบหลักของเกม เวลา 06:00–16:30 น. ตารางเรียน 5 วัน ความหิว เงิน และการตัดเกรด</td>
+              </tr>
+              <tr>
+                <td><code>player.gd</code></td>
+                <td>ควบคุมการเดินของตัวละครผู้เล่น 4 ทิศทาง การชนสิ่งกีดขวาง และการปรับความเร็วตามความอิ่ม</td>
+              </tr>
+              <tr>
+                <td><code>npc.gd</code></td>
+                <td>ควบคุมการเดินและบทสนทนาของตัวละครครูและเพื่อนนักศึกษาในวิทยาลัย</td>
+              </tr>
+              <tr>
+                <td><code>classroom_minigame.gd</code></td>
+                <td>ควบคุมหน้าต่างมินิเกมประจำรายวิชาทั้ง 7 รูปแบบและการคำนวณคะแนน</td>
+              </tr>
+              <tr>
+                <td><code>dialogue_box.gd</code></td>
+                <td>ควบคุมการแสดงผลกล่องข้อความสนทนาและตัวเลือกตอบโต้</td>
+              </tr>
+              <tr>
+                <td><code>save_manager.gd</code></td>
+                <td>จัดการบันทึกและโหลดข้อมูลเกม 3 ช่อง (Save Slots) ในรูปแบบไฟล์ JSON</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
+
+    <!-- บทที่ 4: ผลการประเมินความพึงพอใจ (ตารางที่ 4.1, 4.2 และ ค.1) -->
+    <section class="panel">
+      <span class="label maroon">บทที่ 4 และ ภาคผนวก ค · ผลการวิเคราะห์ข้อมูล</span>
+      <h2>ผลการประเมินความพึงพอใจของผู้เล่น (กลุ่มตัวอย่าง n = 27 คน)</h2>
+      <p style="margin-top: 0;">
+        ข้อมูลทั่วไปของผู้ตอบแบบสอบถาม (ตารางที่ 4.1): นักศึกษาระดับชั้น ปวส. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล จำนวน <strong>27 คน</strong> แบ่งเป็นเพศหญิง <strong>14 คน (ร้อยละ 51.85)</strong> และเพศชาย <strong>13 คน (ร้อยละ 48.15)</strong> ความถี่ในการเล่นเกมบนโทรศัพท์มือถือ: เล่นทุกวัน 11 คน (40.74%), นาน ๆ ครั้ง 9 คน (33.33%), 3–5 วัน/สัปดาห์ 3 คน (11.11%), ไม่ได้ระบุ 3 คน (11.11%) และ 1–2 วัน/สัปดาห์ 1 คน (3.70%)
+      </p>
+
+      <div class="grid-2" style="margin-top: 18px;">
+        <div>
+          <h3 style="font-family: var(--f-display); font-size: 20px; margin: 0 0 12px;">กราฟสรุปคะแนนเฉลี่ยรายด้านทั้ง 6 ด้าน (ตารางที่ 4.2)</h3>
+          <ul class="score-list">
+            <li>
+              <div class="row"><span>1. ด้านการทำงานของระบบเกม</span><span>X̄ = 4.33 · S.D. = 0.89 (มาก)</span></div>
+              <div class="bar"><i style="width: 86.6%"></i></div>
+            </li>
+            <li>
+              <div class="row"><span>2. ด้านการควบคุมตัวละครและการเคลื่อนที่</span><span>X̄ = 4.57 · S.D. = 0.65 (มากที่สุด)</span></div>
+              <div class="bar gold"><i style="width: 91.4%"></i></div>
+            </li>
+            <li>
+              <div class="row"><span>3. ด้านการออกแบบแผนที่และสภาพแวดล้อม</span><span>X̄ = 4.46 · S.D. = 0.68 (มาก)</span></div>
+              <div class="bar"><i style="width: 89.2%"></i></div>
+            </li>
+            <li>
+              <div class="row"><span>4. ด้านภารกิจและกิจกรรมภายในเกม</span><span>X̄ = 4.50 · S.D. = 0.63 (มาก)</span></div>
+              <div class="bar"><i style="width: 90.0%"></i></div>
+            </li>
+            <li>
+              <div class="row"><span>5. ด้านความสนุกสนานและความน่าสนใจ</span><span>X̄ = 4.41 · S.D. = 0.82 (มาก)</span></div>
+              <div class="bar"><i style="width: 88.2%"></i></div>
+            </li>
+            <li>
+              <div class="row"><span>6. ด้านความสะดวกในการใช้งาน</span><span>X̄ = 4.72 · S.D. = 0.56 (มากที่สุด)</span></div>
+              <div class="bar gold"><i style="width: 94.4%"></i></div>
+            </li>
+            <li style="padding-top: 6px; border-top: 2px dashed #dfb97c;">
+              <div class="row"><span><b>รวมเฉลี่ยทุกด้าน (คิดเป็นร้อยละ 90.00)</b></span><span><b>X̄ = 4.50 · S.D. = 0.73 (ระดับมาก)</b></span></div>
+              <div class="bar gold"><i style="width: 90.0%"></i></div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-family: var(--f-display); font-size: 20px; margin: 0 0 12px;">ตารางผลประเมินรายข้อทั้ง 12 ข้อคำถาม (ตารางที่ ค.1)</h3>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>ข้อรายการประเมินความพึงพอใจ</th>
+                  <th class="num">X̄</th>
+                  <th class="num">S.D.</th>
+                  <th>ระดับ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1. เกมทำงานได้ถูกต้อง ไม่ค้างหรือปิดเอง</td><td class="num">4.52</td><td class="num">0.83</td><td>มากที่สุด</td></tr>
+                <tr><td>2. ระบบเวลา เงิน และความหิวทำงานถูกต้องตามกติกา</td><td class="num">4.15</td><td class="num">0.93</td><td>มาก</td></tr>
+                <tr><td>3. จอยสติ๊กและปุ่มควบคุมบนหน้าจอใช้งานง่าย</td><td class="num">4.52</td><td class="num">0.63</td><td>มากที่สุด</td></tr>
+                <tr><td>4. ตัวละครเคลื่อนที่ได้ลื่นไหลและตอบสนองรวดเร็ว</td><td class="num">4.63</td><td class="num">0.67</td><td>มากที่สุด</td></tr>
+                <tr><td>5. แผนที่ในเกมคล้ายกับสถานที่จริงของวิทยาลัย</td><td class="num">4.56</td><td class="num">0.57</td><td>มากที่สุด</td></tr>
+                <tr><td>6. ภาพ สี และเสียงประกอบมีความสวยงามเหมาะสม</td><td class="num">4.37</td><td class="num">0.78</td><td>มาก</td></tr>
+                <tr><td>7. ภารกิจเข้าเรียนและกิจกรรมสอดคล้องกับชีวิตจริง</td><td class="num">4.50</td><td class="num">0.57</td><td>มาก</td></tr>
+                <tr><td>8. มินิเกมประจำรายวิชามีความยากง่ายเหมาะสม</td><td class="num">4.50</td><td class="num">0.69</td><td>มาก</td></tr>
+                <tr><td>9. เกมมีความสนุกและทำให้ผู้เล่นอยากเล่นจนจบ</td><td class="num">4.33</td><td class="num">0.90</td><td>มาก</td></tr>
+                <tr><td>10. ช่วยให้ตระหนักถึงการบริหารเวลาและการใช้เงิน</td><td class="num">4.48</td><td class="num">0.74</td><td>มาก</td></tr>
+                <tr><td>11. ติดตั้งเกมบนโทรศัพท์มือถือได้ง่ายและสะดวก</td><td class="num">4.74</td><td class="num">0.52</td><td>มากที่สุด</td></tr>
+                <tr><td>12. ข้อความ คำแนะนำ และวิธีเล่นอ่านเข้าใจง่าย</td><td class="num">4.70</td><td class="num">0.60</td><td>มากที่สุด</td></tr>
+                <tr class="highlight-row">
+                  <td><b>ค่าเฉลี่ยรวมทั้งหมด (12 ข้อ)</b></td>
+                  <td class="num"><b>4.50</b></td>
+                  <td class="num"><b>0.73</b></td>
+                  <td><b>มาก (90.00%)</b></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- บทที่ 5 และ บรรณานุกรม -->
+    <section class="grid-2">
+      <div class="panel">
+        <span class="label">บทที่ 5 · สรุปผลและข้อเสนอแนะ</span>
+        <h2>ข้อเสนอแนะเพื่อการพัฒนาต่อยอด</h2>
+        <p style="margin-top: 0;">จากความคิดเห็นและข้อเสนอแนะเพิ่มเติมของผู้เล่นในบทที่ 4 และบทที่ 5 สามารถสรุปแนวทางการพัฒนาต่อยอดได้ดังนี้:</p>
+        <ul class="clean">
+          <li><b>1. เพิ่มเนื้อหาและจำนวนสัปดาห์:</b> ขยายระยะเวลาการเล่นจาก 1 สัปดาห์ (5 วัน) เป็นตลอดภาคเรียน พร้อมกิจกรรมกีฬาสีและการสอบปลายภาค</li>
+          <li><b>2. เพิ่มสถานที่และแผนกวิชาอื่น ๆ:</b> ขยายห้องเรียนและมินิเกมให้ครอบคลุมทุกสาขาวิชาของวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</li>
+          <li><b>3. พัฒนาระบบผู้เล่นหลายคน (Multiplayer):</b> เพิ่มโหมดเชื่อมต่อผ่านเครือข่ายให้ผู้เล่นสามารถเดินสำรวจวิทยาลัยและทำกิจกรรมร่วมกับเพื่อนได้พร้อมกัน</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <span class="label">บรรณานุกรม (Bibliography)</span>
+        <h2>เอกสารและแหล่งข้อมูลอ้างอิงในเล่มโครงงาน</h2>
+        <ol class="steps" style="font-size: 15.5px;">
+          <li>ทักษิณา สวนานนท์ และฐานิศรา เกียรติบารมี. (2549). <i>พจนานุกรมศัพท์คอมพิวเตอร์และอินเทอร์เน็ต</i> (พิมพ์ครั้งที่ 11). กรุงเทพฯ: ซีเอ็ดยูเคชั่น.</li>
+          <li>บุญชม ศรีสะอาด. (2560). <i>การวิจัยเบื้องต้น</i> (พิมพ์ครั้งที่ 10). กรุงเทพฯ: สุวีริยาสาส์น.</li>
+          <li>วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา. (2567). <i>คู่มือนักศึกษาและหลักสูตรประกาศนียบัตรวิชาชีพชั้นสูง สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล</i>. ศรีสะเกษ: วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา.</li>
+          <li>วิโรจน์ ชัยมูล และสุพรรษา เหง้าพรหมมินทร์. (2558). <i>ความรู้เบื้องต้นเกี่ยวกับคอมพิวเตอร์และเทคโนโลยีสารสนเทศ</i>. กรุงเทพฯ: โปรวิชั่น.</li>
+          <li>สำนักงานคณะกรรมการการอาชีวศึกษา. (2567). <i>หลักสูตรประกาศนียบัตรวิชาชีพชั้นสูง พุทธศักราช 2567 ประเภทวิชาบริหารธุรกิจ สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล</i>. กรุงเทพฯ: กระทรวงศึกษาธิการ.</li>
+          <li>Godot Engine Community. (2024). <i>Godot Engine 4.x Official Documentation</i>. สืบค้นจาก https://docs.godotengine.org/</li>
+        </ol>
+      </div>
+    </section>
+
   </div>
-</div>
 </main>
+
 <footer>
   <div class="wrap">
-    <div><b>CollegeLifeSim</b> · เกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา · Demo 1.0.4</div>
-    <div>โครงงานนักศึกษา ปวส. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล ห้อง สบค.11 · วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ต.ไพรพัฒนา อ.ภูสิงห์ จ.ศรีสะเกษ</div>
-    <div>ผู้จัดทำ: นายอัษฎาวุฒิ รัตนพันธ์ · นายวราวุธ ธิวะโต · นางสาวสใบทิพย์ แสงเพ็ง</div>
+    <div>
+      <b>โครงงานเกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา (CollegeLifeSim)</b><br>
+      จัดทำโดย นายอัษฎาวุฒิ รัตนพันธ์ · นายวราวุธ ธิวะโต · นางสาวสใบทิพย์ แสงเพ็ง (นักศึกษาระดับชั้น ปวส. ห้อง สบค.11)<br>
+      ครูที่ปรึกษาโครงงาน: นางสาวดวงดาว แสวงทรง · ครูผู้สอน: นายประกิจจ์ ทองมา<br>
+      สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา อำเภอภูสิงห์ จังหวัดศรีสะเกษ ปีการศึกษา 2569
+    </div>
+    <div class="footer-links">
+      <a href="index.html">หน้าแรก</a>
+      <a href="gameplay.html">ระบบเกม</a>
+      <a href="howto.html">วิธีเล่น</a>
+      <a href="gallery.html">ภาพและเทรลเลอร์</a>
+      <a href="download.html">ดาวน์โหลด</a>
+      <a href="about.html">ผู้จัดทำและเล่มโครงงาน</a>
+    </div>
   </div>
 </footer>
-<script src="site.js"></script>
+
+<script src="site.js" defer></script>
 </body>
 </html>

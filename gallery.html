@@ -1,111 +1,472 @@
 <!doctype html>
 <html lang="th">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ภาพในเกม · CollegeLifeSim</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="ภาพหน้าจอจากเกม CollegeLifeSim">
-<link rel="icon" href="images/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600&display=swap">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ภาพและเทรลเลอร์ — CollegeLifeSim เกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</title>
+  <meta name="description" content="ชมวิดีโอเทรลเลอร์ทางการและคลังภาพหน้าจอทั้งหมดของเกม CollegeLifeSim ครบทั้งภาคผนวก ฉ (ภาพหน้าจอเกม) ภาคผนวก จ (การพัฒนาด้วย Godot 4) และโหมดสนามประลองบอสลับ">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="40" height="42"><b>CollegeLifeSim</b></a>
-    <div class="clock" aria-label="นาฬิกาในเกม 1 นาทีในเกมเท่ากับ 1 วินาทีจริง" title="นาฬิกาในเกม: 1 นาทีในเกม = 1 วินาทีจริง"><span class="day">จันทร์</span><span class="time">06:00</span></div>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">เมนู</button>
-    <nav class="nav" id="nav" aria-label="เมนูหลัก"><a href="index.html">หน้าแรก</a><a href="gameplay.html">ระบบเกม</a><a href="howto.html">วิธีเล่น</a><a href="gallery.html" aria-current="page">ภาพในเกม</a><a href="download.html">ดาวน์โหลด</a><a href="about.html">ผู้จัดทำ</a></nav>
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" width="42" height="42" alt="โลโก้เกม CollegeLifeSim">
+      <div class="brand-text">
+        <b>CollegeLifeSim</b>
+        <small>วท.หลวงปู่สรวงวัดไพรพัฒนา · สบค.11</small>
+      </div>
+    </a>
+    <div class="clock" title="เวลาในเกมจำลอง (1 นาทีในเกม = 1 วินาทีจริง)">
+      <span class="day">จันทร์</span>
+      <span class="time">08:15</span>
+    </div>
+    <button class="menu-btn" type="button" aria-expanded="false">☰ เมนู</button>
+    <nav class="nav" aria-label="เมนูหลัก">
+      <a href="index.html">หน้าแรก</a>
+      <a href="gameplay.html">ระบบเกม</a>
+      <a href="howto.html">วิธีเล่น</a>
+      <a href="gallery.html" aria-current="page">ภาพและเทรลเลอร์</a>
+      <a href="download.html" class="nav-cta">ดาวน์โหลด</a>
+      <a href="about.html">ผู้จัดทำและเล่มโครงงาน</a>
+    </nav>
   </div>
 </header>
-<main>
+
 <section class="page-head">
-  <div class="sun" aria-hidden="true" style="width:110px;height:110px;top:14px;right:10%"></div>
+  <div class="sun" aria-hidden="true"></div>
   <div class="cloud c1" aria-hidden="true"></div>
-  <div class="wrap"><h1>ภาพในเกม</h1><p>ภาพหน้าจอจริงจากเกมบนคอมพิวเตอร์ กดที่ภาพเพื่อดูขนาดใหญ่</p></div>
+  <div class="wrap">
+    <span class="badge maroon">GALLERY &amp; OFFICIAL TRAILER · ภาคผนวก จ และ ฉ</span>
+    <h1>คลังภาพหน้าจอและวิดีโอตัวอย่างเกม</h1>
+    <p>รวมวิดีโอเทรลเลอร์ทางการ ภาพหน้าจอจากตัวเกมจริง (ภาคผนวก ฉ) ภาพโหมดบอสลับ และภาพขั้นตอนการพัฒนาด้วย Godot Engine 4 (ภาคผนวก จ)</p>
+  </div>
   <div class="ground" aria-hidden="true"></div>
 </section>
-<div class="ground-section">
+
+<main class="ground-section">
   <div class="wrap">
-    <section><h2 class="on-grass">เมนูและตัวละคร</h2><div class="grid-3"><figure class="shot">
-  <button type="button" data-zoom="images/shot1.jpg" data-caption="หน้าเมนูหลัก" aria-label="ดูภาพใหญ่: หน้าเมนูหลัก"><img src="images/shot1.jpg" alt="หน้าเมนูหลัก" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>หน้าเมนูหลัก</b>ปุ่มเริ่มเกม วิธีเล่น เครดิต สะสมฉากจบ และตั้งค่า</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/shot2.jpg" data-caption="หน้าสร้างตัวละคร" aria-label="ดูภาพใหญ่: หน้าสร้างตัวละคร"><img src="images/shot2.jpg" alt="หน้าสร้างตัวละคร" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>หน้าสร้างตัวละคร</b>ตั้งชื่อไม่เกิน 12 ตัวอักษร เลือกเพศ ทรงผม สี ใบหน้า และของตกแต่ง</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g14.jpg" data-caption="เมนูหยุดเกม" aria-label="ดูภาพใหญ่: เมนูหยุดเกม"><img src="images/g14.jpg" alt="เมนูหยุดเกม" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>เมนูหยุดเกม</b>เล่นต่อ บันทึก โหลดเกม วิธีเล่น ความสำเร็จ สะสมฉากจบ และเสียง</figcaption>
-</figure></div></section><section><h2 class="on-grass">ชีวิตในวิทยาลัย</h2><div class="grid-3"><figure class="shot">
-  <button type="button" data-zoom="images/shot3.jpg" data-caption="หน้าจอขณะเล่นในแผนที่" aria-label="ดูภาพใหญ่: หน้าจอขณะเล่นในแผนที่"><img src="images/shot3.jpg" alt="หน้าจอขณะเล่นในแผนที่" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>หน้าจอขณะเล่นในแผนที่</b>ภารกิจ แผนที่ย่อ วันและเวลา เงิน หลอดแรงและความหิว</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g08.jpg" data-caption="เข้าแถวหน้าเสาธง" aria-label="ดูภาพใหญ่: เข้าแถวหน้าเสาธง"><img src="images/g08.jpg" alt="เข้าแถวหน้าเสาธง" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>เข้าแถวหน้าเสาธง</b>ต้องมาถึงก่อน 08.00 น.</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g01.jpg" data-caption="ภายในอาคาร 3" aria-label="ดูภาพใหญ่: ภายในอาคาร 3"><img src="images/g01.jpg" alt="ภายในอาคาร 3" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>ภายในอาคาร 3</b>เดินหาห้องเรียนตามตาราง</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g07.jpg" data-caption="ครูเช็คชื่อกะทันหัน" aria-label="ดูภาพใหญ่: ครูเช็คชื่อกะทันหัน"><img src="images/g07.jpg" alt="ครูเช็คชื่อกะทันหัน" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>ครูเช็คชื่อกะทันหัน</b>เหตุการณ์สุ่ม ต้องกดตอบให้ทันเวลา</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g13.jpg" data-caption="จุดรถรับส่ง" aria-label="ดูภาพใหญ่: จุดรถรับส่ง"><img src="images/g13.jpg" alt="จุดรถรับส่ง" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>จุดรถรับส่ง</b>ขึ้นรถกลับบ้านเพื่อจบวัน</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/shot6.jpg" data-caption="หน้าสรุปเมื่อจบสัปดาห์" aria-label="ดูภาพใหญ่: หน้าสรุปเมื่อจบสัปดาห์"><img src="images/shot6.jpg" alt="หน้าสรุปเมื่อจบสัปดาห์" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>หน้าสรุปเมื่อจบสัปดาห์</b>คะแนนรวมจาก 100 เกรด และผลรายวิชาวันจันทร์ถึงศุกร์</figcaption>
-</figure></div></section><section><h2 class="on-grass">มินิเกมประจำรายวิชา</h2><div class="grid-3"><figure class="shot">
-  <button type="button" data-zoom="images/g02.jpg" data-caption="กดให้ตรงจังหวะ" aria-label="ดูภาพใหญ่: กดให้ตรงจังหวะ"><img src="images/g02.jpg" alt="กดให้ตรงจังหวะ" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>กดให้ตรงจังหวะ</b>วิชาองค์การและการบริหารงานคุณภาพฯ</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/shot4.jpg" data-caption="ลากชิ้นส่วนใส่ช่อง" aria-label="ดูภาพใหญ่: ลากชิ้นส่วนใส่ช่อง"><img src="images/shot4.jpg" alt="ลากชิ้นส่วนใส่ช่อง" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>ลากชิ้นส่วนใส่ช่อง</b>วิชาโปรแกรมกราฟิก</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g03.jpg" data-caption="ข้อสอบเลือกตอบ" aria-label="ดูภาพใหญ่: ข้อสอบเลือกตอบ"><img src="images/g03.jpg" alt="ข้อสอบเลือกตอบ" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>ข้อสอบเลือกตอบ</b>วิชาทักษะการเขียนและการพูดภาษาไทย</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g04.jpg" data-caption="เลือกคำเติมโค้ด" aria-label="ดูภาพใหญ่: เลือกคำเติมโค้ด"><img src="images/g04.jpg" alt="เลือกคำเติมโค้ด" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>เลือกคำเติมโค้ด</b>วิชาการเขียนโปรแกรมเชิงวัตถุ บนจอจำลอง Dev-C++</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g05.jpg" data-caption="เลือกพรอมต์สั่งงาน AI" aria-label="ดูภาพใหญ่: เลือกพรอมต์สั่งงาน AI"><img src="images/g05.jpg" alt="เลือกพรอมต์สั่งงาน AI" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>เลือกพรอมต์สั่งงาน AI</b>วิชาการประยุกต์ AI สำหรับธุรกิจ</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g06.jpg" data-caption="ประกอบหน้าเว็บ" aria-label="ดูภาพใหญ่: ประกอบหน้าเว็บ"><img src="images/g06.jpg" alt="ประกอบหน้าเว็บ" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>ประกอบหน้าเว็บ</b>วิชาการพัฒนาเว็บไซต์ทางธุรกิจ บนจอจำลอง Google Sites</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g09.jpg" data-caption="เก็บขยะรอบโดม" aria-label="ดูภาพใหญ่: เก็บขยะรอบโดม"><img src="images/g09.jpg" alt="เก็บขยะรอบโดม" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>เก็บขยะรอบโดม</b>กิจกรรมองค์การวิชาชีพวันศุกร์</figcaption>
-</figure></div></section><section><h2 class="on-grass">ร้านค้าและเงิน</h2><div class="grid-3"><figure class="shot">
-  <button type="button" data-zoom="images/shot5.jpg" data-caption="ร้านค้าในโรงอาหาร" aria-label="ดูภาพใหญ่: ร้านค้าในโรงอาหาร"><img src="images/shot5.jpg" alt="ร้านค้าในโรงอาหาร" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>ร้านค้าในโรงอาหาร</b>ก๋วยเตี๋ยว 45 บาท ข้าวไข่เจียว 30 บาท ชาเย็น 15 บาท</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g10.jpg" data-caption="ร้านมินิมาร์ท" aria-label="ดูภาพใหญ่: ร้านมินิมาร์ท"><img src="images/g10.jpg" alt="ร้านมินิมาร์ท" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>ร้านมินิมาร์ท</b>อาหาร เครื่องดื่ม สมุด ปากกา และของตกแต่ง</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g11.jpg" data-caption="ร้านชาตาหนวด" aria-label="ดูภาพใหญ่: ร้านชาตาหนวด"><img src="images/g11.jpg" alt="ร้านชาตาหนวด" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>ร้านชาตาหนวด</b>เครื่องดื่มลดความเหนื่อย</figcaption>
-</figure><figure class="shot">
-  <button type="button" data-zoom="images/g12.jpg" data-caption="โทรศัพท์ในเกม" aria-label="ดูภาพใหญ่: โทรศัพท์ในเกม"><img src="images/g12.jpg" alt="โทรศัพท์ในเกม" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>โทรศัพท์ในเกม</b>ฝากถอนเงินและโทรหาแม่</figcaption>
-</figure></div></section>
-    <p class="panel" style="margin:0">แถบด้านล่างของจอในภาพคือคำแนะนำปุ่มบนคอมพิวเตอร์ ถ้าเล่นบนมือถือจะเห็นจอยสติ๊กและปุ่มบนหน้าจอแทน</p>
+
+    <!-- วิดีโอเทรลเลอร์ทางการ -->
+    <section class="trailer-box" aria-labelledby="gallery-trailer-title">
+      <div class="trailer-head">
+        <div>
+          <span class="label gold">OFFICIAL GAME TRAILER · 1080p 60fps (1 นาที 30 วินาที)</span>
+          <h2 id="gallery-trailer-title">🎬 เทรลเลอร์เกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</h2>
+          <p>คลิกปุ่มช่วงเวลาด้านล่างเพื่อข้ามไปยังฉากที่ต้องการชมได้ทันที</p>
+        </div>
+        <a class="btn gold sm" href="images/trailer.mp4" download="CollegeLifeSim_Official_Trailer.mp4">⬇ ดาวน์โหลดไฟล์วิดีโอ (.mp4)</a>
+      </div>
+
+      <div class="video-stage">
+        <video id="trailer-video" controls preload="metadata" poster="images/trailer-poster.jpg" playsinline>
+          <source src="images/trailer.mp4" type="video/mp4">
+          เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ HTML5
+        </video>
+      </div>
+
+      <div class="chapter-bar" aria-label="เลือกช่วงเวลาในเทรลเลอร์">
+        <span class="ch-label">⏩ เลือกฉากในวิดีโอ:</span>
+        <button type="button" class="ch-btn active" data-seek="0"><time>0:00</time>เปิดตัวเกม</button>
+        <button type="button" class="ch-btn" data-seek="5"><time>0:05</time>ชีวิต 5 วันในวิทยาลัย</button>
+        <button type="button" class="ch-btn" data-seek="20"><time>0:20</time>สำรวจอาคารเรียน &amp; เข้าเรียน</button>
+        <button type="button" class="ch-btn" data-seek="40"><time>0:40</time>กิจกรรม &amp; ความลับ</button>
+        <button type="button" class="ch-btn" data-seek="55"><time>0:55</time>บอสลับ &amp; คัตซีนต่อสู้</button>
+        <button type="button" class="ch-btn" data-seek="65"><time>1:05</time>สนามต่อสู้แมพพิเศษ</button>
+        <button type="button" class="ch-btn" data-seek="70"><time>1:10</time>บลู ราชาทองคำ</button>
+      </div>
+    </section>
+
+    <!-- ปุ่มกรองหมวดภาพ -->
+    <section class="panel" style="padding: 18px 22px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px;">
+        <b style="font-family: var(--f-display); font-size: 20px;">🖼️ เลือกดูตามหมวดหมู่ภาพ (คลิกที่ภาพใดก็ได้เพื่อขยายเต็มจอ):</b>
+        <span style="font-family: var(--f-ui); font-size: 14.5px; color: var(--ink-soft);">รวมทั้งหมด 36 ภาพจากตัวเกมและเล่มโครงงาน</span>
+      </div>
+      <div class="filter-bar" style="margin-bottom: 0;">
+        <button type="button" class="filter-btn active" data-filter="all">แสดงทั้งหมด (36)</button>
+        <button type="button" class="filter-btn" data-filter="campus">1. เมนู แผนที่ &amp; ชีวิตในวิทยาลัย (11)</button>
+        <button type="button" class="filter-btn" data-filter="minigames">2. มินิเกมประจำวิชาทั้ง 7 + กิจกรรม (8)</button>
+        <button type="button" class="filter-btn" data-filter="extra">3. งานพิเศษ บอสลับ &amp; สนามประลอง (7)</button>
+        <button type="button" class="filter-btn" data-filter="dev">4. ขั้นตอนการพัฒนาด้วย Godot 4 — ภาคผนวก จ (10)</button>
+      </div>
+    </section>
+
+    <!-- หมวดที่ 1: เมนู แผนที่ และชีวิตในวิทยาลัย (ภาคผนวก ฉ) -->
+    <section data-gallery-cat="campus">
+      <div class="sec-head">
+        <div>
+          <span class="label">หมวดที่ 1 · ภาคผนวก ฉ (ภาพหน้าจอหลักและบรรยากาศในวิทยาลัย)</span>
+          <h2 class="on-grass">เมนูหลัก การสร้างตัวละคร แผนที่ และการใช้ชีวิตในวิทยาลัย</h2>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <figure class="shot">
+          <button type="button" data-zoom="images/g01.jpg" data-caption="ภาพที่ ฉ.1 หน้าจอเมนูหลักของเกม (Title Screen)">
+            <span class="fig-tag">ภาพที่ ฉ.1</span>
+            <img src="images/g01.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.1 หน้าจอเมนูหลักของเกม">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.1 หน้าจอเมนูหลักของเกม</b>แสดงชื่อเกม ปุ่มเริ่มเกมใหม่ โหลดเกม สนามประลอง และตั้งค่า</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g02.jpg" data-caption="ภาพที่ ฉ.2 หน้าจอสร้างและปรับแต่งตัวละครนักศึกษา">
+            <span class="fig-tag">ภาพที่ ฉ.2</span>
+            <img src="images/g02.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.2 หน้าจอสร้างตัวละคร">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.2 หน้าจอสร้างและปรับแต่งตัวละคร</b>เลือกเพศ ทรงผม 35 แบบ สีผม 16 สี สีผิว และเครื่องประดับ</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g03.jpg" data-caption="ภาพที่ ฉ.3 การเดินสำรวจบริเวณหน้าอาคารเรียนและลานเสาธง">
+            <span class="fig-tag">ภาพที่ ฉ.3</span>
+            <img src="images/g03.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.3 บริเวณหน้าอาคารเรียน">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.3 บริเวณหน้าอาคารเรียน</b>มุมมอง Isometric 2D พร้อมหน้าจอ HUD แสดงสถานะครบถ้วน</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g04.jpg" data-caption="ภาพที่ ฉ.4 หน้าต่างตารางเรียนประจำสัปดาห์ (จันทร์–ศุกร์)">
+            <span class="fig-tag">ภาพที่ ฉ.4</span>
+            <img src="images/g04.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.4 หน้าต่างตารางเรียน">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.4 หน้าต่างตารางเรียนประจำสัปดาห์</b>แสดงเวลาเรียน เลขห้องเรียน และสถานะการเข้าเรียนแต่ละวิชา</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g05.jpg" data-caption="ภาพที่ ฉ.5 หน้าต่างร้านอาหารภายในโรงอาหารของวิทยาลัย">
+            <span class="fig-tag">ภาพที่ ฉ.5</span>
+            <img src="images/g05.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.5 หน้าต่างโรงอาหาร">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.5 หน้าต่างร้านอาหารในโรงอาหาร</b>เลือกซื้อก๋วยเตี๋ยว ข้าวไข่เจียว และชาเย็นเพื่อเติมค่าความอิ่ม</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g14.jpg" data-caption="ภาพที่ ฉ.14 หน้าจอสรุปผลการเรียนและประเมินเกรดเมื่อจบสัปดาห์">
+            <span class="fig-tag">ภาพที่ ฉ.14</span>
+            <img src="images/g14.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.14 หน้าจอสรุปผลการเรียน">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.14 หน้าจอสรุปผลการเรียนปลายสัปดาห์</b>สรุปจำนวนคาบที่เข้าเรียน เงินคงเหลือ และเกรดที่ได้รับ (S–F)</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/bigmap.png" data-caption="แผนที่มุมสูงของวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนาและชุมชนโดยรอบ">
+            <span class="fig-tag">แผนที่เต็ม</span>
+            <img src="images/bigmap.png" width="1280" height="720" loading="lazy" alt="แผนที่มุมสูงของวิทยาลัย">
+          </button>
+          <figcaption><b>แผนที่โลกฉบับเต็ม (World Map)</b>ครอบคลุมอาคารเรียน โรงอาหาร โดมกิจกรรม สนามฟุตบอล และหมู่บ้าน</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/plaza.png" data-caption="ลานหน้าเสาธงและโดมกิจกรรมเอนกประสงค์ของวิทยาลัย">
+            <span class="fig-tag">ลานหน้าโดม</span>
+            <img src="images/plaza.png" width="1280" height="720" loading="lazy" alt="ลานหน้าเสาธงและโดมกิจกรรม">
+          </button>
+          <figcaption><b>ลานหน้าเสาธงและโดมกิจกรรม</b>จุดนัดพบและทำกิจกรรมหน้าเสาธงยามเช้า</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/shot3.jpg" data-caption="โถงทางเดินภายในอาคารเรียน 3 ชั้น พร้อมป้ายเลขห้องเรียน">
+            <span class="fig-tag">อาคารเรียน</span>
+            <img src="images/shot3.jpg" width="1280" height="720" loading="lazy" alt="โถงทางเดินภายในอาคารเรียน">
+          </button>
+          <figcaption><b>โถงทางเดินภายในอาคารเรียน 3 ชั้น</b>เดินขึ้น–ลงบันไดเพื่อไปยังห้องเรียนชั้น 1, 2 และ 3</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/shot5.jpg" data-caption="ระบบบทสนทนากับครูและเพื่อนนักศึกษาภายในวิทยาลัย">
+            <span class="fig-tag">ระบบสนทนา</span>
+            <img src="images/shot5.jpg" width="1280" height="720" loading="lazy" alt="ระบบบทสนทนากับตัวละคร NPC">
+          </button>
+          <figcaption><b>ระบบพูดคุยกับครูและเพื่อนนักศึกษา (NPC)</b>รับฟังคำแนะนำ ข้อมูลวิชาเรียน และภารกิจเสริม</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/hotpot.png" data-caption="ร้านหมูทะและร้านค้าบริเวณรอบวิทยาลัย">
+            <span class="fig-tag">ร้านค้ารอบวิทยาลัย</span>
+            <img src="images/hotpot.png" width="1280" height="720" loading="lazy" alt="ร้านหมูทะรอบวิทยาลัย">
+          </button>
+          <figcaption><b>ร้านหมูทะและพื้นที่พักผ่อน</b>แวะรับประทานอาหารและสังสรรค์หลังเลิกเรียน</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- หมวดที่ 2: มินิเกมประจำรายวิชาทั้ง 7 รูปแบบ + กิจกรรมโดม -->
+    <section data-gallery-cat="minigames">
+      <div class="sec-head">
+        <div>
+          <span class="label">หมวดที่ 2 · ภาคผนวก ฉ (ภาพที่ ฉ.6 – ฉ.13)</span>
+          <h2 class="on-grass">มินิเกมประจำรายวิชาทั้ง 7 รูปแบบ และกิจกรรมองค์การวิชาชีพ</h2>
+        </div>
+      </div>
+
+      <div class="grid-4">
+        <figure class="shot">
+          <button type="button" data-zoom="images/g06.jpg" data-caption="ภาพที่ ฉ.6 มินิเกมกดให้ตรงจังหวะ (วิชาองค์การฯ / พลังงานฯ / สังคมไทยฯ)">
+            <span class="fig-tag">ภาพที่ ฉ.6</span>
+            <img src="images/g06.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.6 มินิเกมกดให้ตรงจังหวะ">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.6 กดให้ตรงจังหวะ</b>กดปุ่มเมื่อแถบวิ่งเข้าโซนสีเขียว 8 รอบ</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g07.jpg" data-caption="ภาพที่ ฉ.7 มินิเกมวิชาโปรแกรมกราฟิกฯ (ลากชิ้นส่วนใส่ช่องใน Photoshop)">
+            <span class="fig-tag">ภาพที่ ฉ.7</span>
+            <img src="images/g07.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.7 มินิเกมโปรแกรมกราฟิก">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.7 โปรแกรมกราฟิกฯ</b>ลากชิ้นส่วนภาพ 5 ชิ้นลงช่องใน 30 วินาที</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g08.jpg" data-caption="ภาพที่ ฉ.8 มินิเกมวิชาทักษะการเขียนและการพูดภาษาไทยฯ (ข้อสอบ 5 ข้อ)">
+            <span class="fig-tag">ภาพที่ ฉ.8</span>
+            <img src="images/g08.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.8 มินิเกมภาษาไทย">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.8 ทักษะภาษาไทยฯ</b>ตอบคำถามปรนัย 4 ตัวเลือก (ก–ง) 5 ข้อ</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g09.jpg" data-caption="ภาพที่ ฉ.9 มินิเกมวิชาการเขียนโปรแกรมเชิงวัตถุ (เลือกคำเติมโค้ด Dev-C++)">
+            <span class="fig-tag">ภาพที่ ฉ.9</span>
+            <img src="images/g09.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.9 มินิเกมเขียนโปรแกรมเชิงวัตถุ">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.9 เขียนโปรแกรมเชิงวัตถุ</b>เลือกคำสั่งเติมโค้ดในหน้าจอ Dev-C++</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g10.jpg" data-caption="ภาพที่ ฉ.10 มินิเกมวิชาการประยุกต์ AI สำหรับธุรกิจ (พิมพ์พรอมต์สั่งงาน AI)">
+            <span class="fig-tag">ภาพที่ ฉ.10</span>
+            <img src="images/g10.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.10 มินิเกมการประยุกต์ AI">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.10 การประยุกต์ AIฯ</b>พิมพ์พรอมต์สั่งงาน AI ตามโจทย์ 3 รอบ</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g11.jpg" data-caption="ภาพที่ ฉ.11 มินิเกมวิชาโครงงานเทคโนโลยีธุรกิจดิจิทัล (Microsoft Word)">
+            <span class="fig-tag">ภาพที่ ฉ.11</span>
+            <img src="images/g11.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.11 มินิเกมโครงงานเทคโนโลยีธุรกิจดิจิทัล">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.11 โครงงานธุรกิจดิจิทัล</b>เลือกคำที่ถูกต้องลงในเอกสาร Word</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g12.jpg" data-caption="ภาพที่ ฉ.12 มินิเกมวิชาการพัฒนาเว็บไซต์ทางธุรกิจ (Google Sites)">
+            <span class="fig-tag">ภาพที่ ฉ.12</span>
+            <img src="images/g12.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.12 มินิเกมการพัฒนาเว็บไซต์ทางธุรกิจ">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.12 พัฒนาเว็บไซต์ทางธุรกิจ</b>ประกอบโครงสร้างหน้าเว็บ 5 ส่วน</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/g13.jpg" data-caption="ภาพที่ ฉ.13 กิจกรรมองค์การวิชาชีพ 1 เดินเก็บขยะรอบโดมกิจกรรม">
+            <span class="fig-tag">ภาพที่ ฉ.13</span>
+            <img src="images/g13.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ ฉ.13 กิจกรรมองค์การวิชาชีพ 1">
+          </button>
+          <figcaption><b>ภาพที่ ฉ.13 กิจกรรมองค์การวิชาชีพ 1</b>เดินเก็บขยะ 10 จุดรอบโดมในวันศุกร์บ่าย</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- หมวดที่ 3: งานพิเศษ บอสลับ และโหมดสนามประลอง -->
+    <section data-gallery-cat="extra">
+      <div class="sec-head">
+        <div>
+          <span class="label">หมวดที่ 3 · กิจกรรมเสริมและโหมดต่อสู้พิเศษ</span>
+          <h2 class="on-grass">งานพาร์ทไทม์ บอสลับ และสนามประลองพิเศษ</h2>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <figure class="shot">
+          <button type="button" data-zoom="images/rubber.png" data-caption="งานพิเศษรับจ้างกรีดยางพาราเพื่อหารายได้เสริม">
+            <span class="fig-tag">งานพิเศษ</span>
+            <img src="images/rubber.png" width="1280" height="720" loading="lazy" alt="งานพิเศษกรีดยางพารา">
+          </button>
+          <figcaption><b>งานรับจ้างกรีดยางพารา</b>มินิเกมหารายได้เสริมนอกเวลาเรียน</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/boss-yak.png" data-caption="การต่อสู้กับบอสลับ พญายักษ์">
+            <span class="fig-tag">บอสลับ</span>
+            <img src="images/boss-yak.png" width="1280" height="720" loading="lazy" alt="บอสลับ พญายักษ์">
+          </button>
+          <figcaption><b>ท้าดวลบอสลับ: พญายักษ์</b>การต่อสู้สุดตื่นเต้นเพื่อชิงรางวัลและการ์ดสะสม</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/boss-win.png" data-caption="หน้าจอรับรางวัลและการ์ดสะสมหลังเอาชนะบอสลับ">
+            <span class="fig-tag">การ์ดสะสม</span>
+            <img src="images/boss-win.png" width="1280" height="720" loading="lazy" alt="รับการ์ดสะสมหลังชนะบอส">
+          </button>
+          <figcaption><b>ปลดล็อกการ์ดสะสมหายาก</b>สะสมการ์ดประจำตัวละครครบ 30 ใบ</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/boss-boom.jpg" data-caption="ฉากคัตซีนท้าดวลกับ บูม — แกคิดว่าชนะฉันได้หรอ">
+            <span class="fig-tag">คัตซีนเนื้อเรื่อง</span>
+            <img src="images/boss-boom.jpg" width="1280" height="720" loading="lazy" alt="คัตซีนท้าดวลกับบูม">
+          </button>
+          <figcaption><b>คัตซีนท้าดวลตัวละครพิเศษ (บูม)</b>ฉากบทสนทนาเปิดตัวก่อนเข้าสู่การประลอง</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/boss-drago.jpg" data-caption="ฉากคัตซีน ดราโก้ — ข้าจะเผาผลาญทุกสิ่งให้เป็นเถ้าถ่าน">
+            <span class="fig-tag">คัตซีนบอส</span>
+            <img src="images/boss-drago.jpg" width="1280" height="720" loading="lazy" alt="คัตซีนบอสดราโก้">
+          </button>
+          <figcaption><b>คัตซีนเปิดตัว: ดราโก้</b>หนึ่งในคู่ต่อสู้ระดับสูงของโหมดเนื้อเรื่องลับ</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/boss-blue.jpg" data-caption="สนามประลองแมพพิเศษ — ปะทะ บลู ราชาทองคำ (LV.99 HP 5500)">
+            <span class="fig-tag">สนามประลอง</span>
+            <img src="images/boss-blue.jpg" width="1280" height="720" loading="lazy" alt="สนามประลอง บลู ราชาทองคำ">
+          </button>
+          <figcaption><b>สนามประลอง: บลู ราชาทองคำ (LV.99)</b>โหมดต่อสู้แมพพิเศษพร้อมสกิลอาวุธทองคำ</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/boss-blue-ult.jpg" data-caption="ท่าไม้ตาย อาณาเขตทองคำ: วิหารราชันย์ ของ บลู ราชาทองคำ">
+            <span class="fig-tag">ท่าไม้ตาย</span>
+            <img src="images/boss-blue-ult.jpg" width="1280" height="720" loading="lazy" alt="อาณาเขตทองคำ วิหารราชันย์">
+          </button>
+          <figcaption><b>อาณาเขตทองคำ: วิหารราชันย์</b>เอฟเฟกต์ท่าไม้ตายเต็มหน้าจอในโหมดสนามประลอง</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- หมวดที่ 4: ขั้นตอนการพัฒนาเกมด้วย Godot Engine 4 (ภาคผนวก จ และบทที่ 3) -->
+    <section data-gallery-cat="dev">
+      <div class="sec-head">
+        <div>
+          <span class="label">หมวดที่ 4 · ภาคผนวก จ และบทที่ 3 (การพัฒนาด้วย Godot Engine 4)</span>
+          <h2 class="on-grass">ภาพขั้นตอนการพัฒนาเกมและโครงสร้างโค้ด GDScript</h2>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <figure class="shot">
+          <button type="button" data-zoom="images/dev1.jpg" data-caption="ภาพที่ จ.1 การสร้างโปรเจกต์และจัดโครงสร้างโฟลเดอร์ในโปรแกรม Godot Engine 4">
+            <span class="fig-tag">ภาพที่ จ.1</span>
+            <img src="images/dev1.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ จ.1 การสร้างโปรเจกต์ใน Godot Engine 4">
+          </button>
+          <figcaption><b>ภาพที่ จ.1 โครงสร้างโปรเจกต์ใน Godot 4</b>จัดการโฟลเดอร์ scripts, scenes, assets และ audio</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/dev2.jpg" data-caption="ภาพที่ จ.2 การออกแบบฉากแผนที่วิทยาลัยและวางตำแหน่งอาคารเรียน">
+            <span class="fig-tag">ภาพที่ จ.2</span>
+            <img src="images/dev2.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ จ.2 การออกแบบฉากแผนที่วิทยาลัย">
+          </button>
+          <figcaption><b>ภาพที่ จ.2 การออกแบบฉากแผนที่วิทยาลัย</b>จัดวางอาคารเรียน 3 ชั้น โดมกิจกรรม และโรงอาหาร</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/dev3.jpg" data-caption="ภาพที่ จ.3 การกำหนดขอบเขตการชน (CollisionShape2D) และจุดเปลี่ยนฉาก">
+            <span class="fig-tag">ภาพที่ จ.3</span>
+            <img src="images/dev3.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ จ.3 การกำหนดขอบเขตการชน">
+          </button>
+          <figcaption><b>ภาพที่ จ.3 การกำหนดพื้นที่ชนและประตูห้อง</b>ตั้งค่า Collision และจุดโต้ตอบหน้าห้องเรียน</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/dev4.jpg" data-caption="ภาพที่ จ.4 การสร้างโหนดตัวละครผู้เล่น (CharacterBody2D) และอนิเมชันการเดิน">
+            <span class="fig-tag">ภาพที่ จ.4</span>
+            <img src="images/dev4.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ จ.4 การสร้างโหนดตัวละครผู้เล่น">
+          </button>
+          <figcaption><b>ภาพที่ จ.4 โหนดตัวละครและสไปรต์ชีต</b>กำหนด CharacterBody2D และท่าเดิน 4 ทิศทาง</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/dev5.jpg" data-caption="ภาพที่ จ.5 การเขียนชุดคำสั่งภาษา GDScript ควบคุมระบบเวลาและตารางเรียน">
+            <span class="fig-tag">ภาพที่ จ.5</span>
+            <img src="images/dev5.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ จ.5 การเขียนโค้ด GDScript ระบบเวลา">
+          </button>
+          <figcaption><b>ภาพที่ จ.5 การเขียนโค้ดระบบเวลาและตารางเรียน</b>พัฒนาด้วยภาษา GDScript ในไฟล์ main.gd</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/dev6.jpg" data-caption="ภาพที่ จ.6 การสร้างส่วนติดต่อผู้ใช้ (HUD) และปุ่มควบคุมบนหน้าจอสัมผัส">
+            <span class="fig-tag">ภาพที่ จ.6</span>
+            <img src="images/dev6.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ จ.6 การสร้างส่วนติดต่อผู้ใช้ HUD">
+          </button>
+          <figcaption><b>ภาพที่ จ.6 การออกแบบหน้าจอ HUD &amp; ปุ่มมือถือ</b>รองรับทั้งเมาส์/คีย์บอร์ดและหน้าจอสัมผัสแอนดรอยด์</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/dev7.jpg" data-caption="ภาพที่ จ.7 การพัฒนาหน้าต่างมินิเกมประจำรายวิชาทั้ง 7 รูปแบบ">
+            <span class="fig-tag">ภาพที่ จ.7</span>
+            <img src="images/dev7.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ จ.7 การพัฒนามินิเกมประจำรายวิชา">
+          </button>
+          <figcaption><b>ภาพที่ จ.7 การสร้างมินิเกมประจำรายวิชา</b>เขียนสคริปต์ควบคุมกติกาและคำนวณคะแนนแต่ละวิชา</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/dev8.jpg" data-caption="ภาพที่ จ.8 การส่งออกไฟล์ติดตั้งเกม (Export Project) สำหรับระบบ Android (.apk) และ Windows (.exe)">
+            <span class="fig-tag">ภาพที่ จ.8</span>
+            <img src="images/dev8.jpg" width="1280" height="720" loading="lazy" alt="ภาพที่ จ.8 การส่งออกไฟล์ติดตั้งเกม">
+          </button>
+          <figcaption><b>ภาพที่ จ.8 การส่งออกไฟล์ติดตั้ง (.apk &amp; .exe)</b>ตั้งค่า Export Template สำหรับ Android และ Windows</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/code-main.png" data-caption="ภาพที่ 3.3 ตัวอย่างโค้ดระบบเวลาและตารางเรียนในไฟล์ main.gd (บทที่ 3)">
+            <span class="fig-tag">ภาพที่ 3.3 · main.gd</span>
+            <img src="images/code-main.png" width="1280" height="720" loading="lazy" alt="ภาพที่ 3.3 โค้ดระบบเวลาใน main.gd">
+          </button>
+          <figcaption><b>ภาพที่ 3.3 โค้ดระบบเวลาในเกม (main.gd)</b>คำนวณการเดินของเวลา 06:00–16:30 น. และตรวจสอบคาบเรียน</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/code-player.png" data-caption="ภาพที่ 3.4 ตัวอย่างโค้ดควบคุมการเคลื่อนที่ของตัวละครในไฟล์ player.gd (บทที่ 3)">
+            <span class="fig-tag">ภาพที่ 3.4 · player.gd</span>
+            <img src="images/code-player.png" width="1280" height="720" loading="lazy" alt="ภาพที่ 3.4 โค้ดควบคุมตัวละครใน player.gd">
+          </button>
+          <figcaption><b>ภาพที่ 3.4 โค้ดควบคุมตัวละคร (player.gd)</b>รับค่าจากคีย์บอร์ดและจอยสติ๊กมือถือพร้อมคำนวณความเร็วตามความอิ่ม</figcaption>
+        </figure>
+      </div>
+    </section>
+
   </div>
-</div>
-<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="ดูภาพขยาย">
-  <button class="btn light close" type="button">ปิด</button>
-  <figure><img src="" alt=""><figcaption></figcaption>
-    <div class="nav-arrows"><button class="btn light prev" type="button">ก่อนหน้า</button><button class="btn light next" type="button">ถัดไป</button></div>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="ภาพขนาดใหญ่" hidden>
+  <button type="button" class="btn light close">✕ ปิด (Esc)</button>
+  <figure>
+    <img src="images/g01.jpg" alt="">
+    <figcaption></figcaption>
+    <div class="nav-arrows">
+      <button type="button" class="btn light prev">← ภาพก่อนหน้า</button>
+      <button type="button" class="btn light next">ภาพถัดไป →</button>
+    </div>
   </figure>
 </div>
-</main>
+
 <footer>
   <div class="wrap">
-    <div><b>CollegeLifeSim</b> · เกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา · Demo 1.0.4</div>
-    <div>โครงงานนักศึกษา ปวส. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล ห้อง สบค.11 · วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ต.ไพรพัฒนา อ.ภูสิงห์ จ.ศรีสะเกษ</div>
-    <div>ผู้จัดทำ: นายอัษฎาวุฒิ รัตนพันธ์ · นายวราวุธ ธิวะโต · นางสาวสใบทิพย์ แสงเพ็ง</div>
+    <div>
+      <b>โครงงานเกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา (CollegeLifeSim)</b><br>
+      จัดทำโดย นายอัษฎาวุฒิ รัตนพันธ์ · นายวราวุธ ธิวะโต · นางสาวสใบทิพย์ แสงเพ็ง (นักศึกษาระดับชั้น ปวส. ห้อง สบค.11)<br>
+      ครูที่ปรึกษาโครงงาน: นางสาวดวงดาว แสวงทรง · ครูผู้สอน: นายประกิจจ์ ทองมา<br>
+      สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา อำเภอภูสิงห์ จังหวัดศรีสะเกษ ปีการศึกษา 2569
+    </div>
+    <div class="footer-links">
+      <a href="index.html">หน้าแรก</a>
+      <a href="gameplay.html">ระบบเกม</a>
+      <a href="howto.html">วิธีเล่น</a>
+      <a href="gallery.html">ภาพและเทรลเลอร์</a>
+      <a href="download.html">ดาวน์โหลด</a>
+      <a href="about.html">ผู้จัดทำและเล่มโครงงาน</a>
+    </div>
   </div>
 </footer>
-<script src="site.js"></script>
+
+<script src="site.js" defer></script>
 </body>
 </html>

@@ -1,137 +1,247 @@
 <!doctype html>
 <html lang="th">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>วิธีเล่น · CollegeLifeSim</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="วิธีเริ่มเล่น ปุ่มควบคุมบนคอมพิวเตอร์และมือถือ และเคล็ดลับเกม CollegeLifeSim">
-<link rel="icon" href="images/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600&display=swap">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>วิธีเล่น — CollegeLifeSim เกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</title>
+  <meta name="description" content="คู่มือการเล่นเกม CollegeLifeSim การสร้างตัวละคร ปุ่มควบคุมบนคอมพิวเตอร์และโทรศัพท์มือถือ แอนดรอยด์ การอ่านหน้าจอ HUD และแผนผังการทำงานของเกมจากบทที่ 3">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="40" height="42"><b>CollegeLifeSim</b></a>
-    <div class="clock" aria-label="นาฬิกาในเกม 1 นาทีในเกมเท่ากับ 1 วินาทีจริง" title="นาฬิกาในเกม: 1 นาทีในเกม = 1 วินาทีจริง"><span class="day">จันทร์</span><span class="time">06:00</span></div>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">เมนู</button>
-    <nav class="nav" id="nav" aria-label="เมนูหลัก"><a href="index.html">หน้าแรก</a><a href="gameplay.html">ระบบเกม</a><a href="howto.html" aria-current="page">วิธีเล่น</a><a href="gallery.html">ภาพในเกม</a><a href="download.html">ดาวน์โหลด</a><a href="about.html">ผู้จัดทำ</a></nav>
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" width="42" height="42" alt="โลโก้เกม CollegeLifeSim">
+      <div class="brand-text">
+        <b>CollegeLifeSim</b>
+        <small>วท.หลวงปู่สรวงวัดไพรพัฒนา · สบค.11</small>
+      </div>
+    </a>
+    <div class="clock" title="เวลาในเกมจำลอง (1 นาทีในเกม = 1 วินาทีจริง)">
+      <span class="day">จันทร์</span>
+      <span class="time">08:15</span>
+    </div>
+    <button class="menu-btn" type="button" aria-expanded="false">☰ เมนู</button>
+    <nav class="nav" aria-label="เมนูหลัก">
+      <a href="index.html">หน้าแรก</a>
+      <a href="gameplay.html">ระบบเกม</a>
+      <a href="howto.html" aria-current="page">วิธีเล่น</a>
+      <a href="gallery.html">ภาพและเทรลเลอร์</a>
+      <a href="download.html" class="nav-cta">ดาวน์โหลด</a>
+      <a href="about.html">ผู้จัดทำและเล่มโครงงาน</a>
+    </nav>
   </div>
 </header>
-<main>
+
 <section class="page-head">
-  <div class="sun" aria-hidden="true" style="width:110px;height:110px;top:14px;right:10%"></div>
+  <div class="sun" aria-hidden="true"></div>
   <div class="cloud c1" aria-hidden="true"></div>
-  <div class="wrap"><h1>วิธีเล่น</h1><p>เริ่มเกมได้ในไม่กี่นาที เล่นได้ทั้งคีย์บอร์ดบนคอมพิวเตอร์และปุ่มบนจอมือถือ</p></div>
+  <div class="wrap">
+    <span class="badge maroon">HOW TO PLAY · คู่มือผู้เล่นและแผนผังระบบ</span>
+    <h1>วิธีเล่นและการควบคุมตัวละคร</h1>
+    <p>เรียนรู้ขั้นตอนตั้งแต่การสร้างตัวละคร ปุ่มควบคุมบน PC และ Android การอ่านหน้าจอ HUD ไปจนถึงเทคนิคพิชิตเกรด S</p>
+  </div>
   <div class="ground" aria-hidden="true"></div>
 </section>
-<div class="ground-section">
-  <div class="wrap">
-    <section class="grid-2" id="create">
-      <div class="panel">
-        <span class="label">เริ่มต้น</span>
-        <h2>เริ่มเล่นครั้งแรก</h2>
-        <ol class="steps">
-          <li>ที่เมนูหลัก กด <b>เริ่มเกม</b></li>
-          <li>สร้างตัวละคร ตั้งชื่อได้ไม่เกิน 12 ตัวอักษร เลือกเพศ ทรงผม สี ใบหน้า และของตกแต่ง แล้วกด <b>เริ่มเลย</b></li>
-          <li>อ่านกล่องภารกิจมุมซ้ายบน แล้วเดินไปเข้าแถวหน้าเสาธงก่อน 08.00 น.</li>
-          <li>เข้าห้องเรียนตามภารกิจ เดินไปใกล้โต๊ะเรียนจนมีแสงกะพริบ แล้วกดโต้ตอบเพื่อทำมินิเกม</li>
-          <li>เลิกเรียนแล้วไปขึ้นรถรับส่งเพื่อจบวัน ทำแบบนี้จนครบวันศุกร์</li>
-        </ol>
-        <p style="margin-top:14px">ที่เมนูหลักยังมี <b>วิธีเล่น</b> <b>เครดิต</b> <b>สะสมฉากจบ</b> และ <b>ตั้งค่า</b></p>
-      </div>
-      <figure class="shot">
-  <button type="button" data-zoom="images/shot2.jpg" data-caption="หน้าสร้างตัวละคร" aria-label="ดูภาพใหญ่: หน้าสร้างตัวละคร"><img src="images/shot2.jpg" alt="หน้าสร้างตัวละคร" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>หน้าสร้างตัวละคร</b>เลือกหน้าตาตัวละครก่อนเริ่มสัปดาห์แรก</figcaption>
-</figure>
-    </section>
 
+<main class="ground-section">
+  <div class="wrap">
+
+    <!-- 1. การเริ่มต้นเกมและสร้างตัวละคร -->
     <section class="grid-2">
       <div class="panel">
-        <span class="label">คอมพิวเตอร์</span>
-        <h2>ปุ่มบนคีย์บอร์ด</h2>
+        <span class="label">ขั้นตอนที่ 1 · เริ่มต้นเกมใหม่</span>
+        <h2>การสร้างและปรับแต่งตัวละครนักศึกษา</h2>
+        <p>เมื่อกดปุ่ม <strong>“เริ่มเกมใหม่”</strong> จากหน้าเมนูหลัก ผู้เล่นจะเข้าสู่หน้าจอปรับแต่งตัวละครซึ่งสามารถกำหนดเอกลักษณ์ของตนเองได้อย่างละเอียด:</p>
+        <ol class="steps">
+          <li><b>ตั้งชื่อและเลือกเพศ:</b> กำหนดชื่อตัวละครและเลือกชุดเครื่องแบบนักศึกษาชายหรือหญิงของวิทยาลัย</li>
+          <li><b>เลือกทรงผมและสีผม:</b> มีทรงผมให้เลือกถึง <strong>35 แบบ</strong> พร้อมเฉดสีผม <strong>16 สี</strong> และสีผิว <strong>4 เฉดสี</strong></li>
+          <li><b>สวมใส่เครื่องประดับ:</b> เลือกแว่นตา หมวก หน้ากาก หูฟัง หรือเครื่องประดับเสริมกว่า <strong>67 ชิ้น</strong></li>
+          <li><b>สร้างตัวละครจากภาพถ่าย (Photo-to-NPC):</b> สามารถอัปโหลดภาพถ่ายใบหน้าเพื่อให้ระบบวิเคราะห์สีผิว สีผม และสร้างตัวละครให้อัตโนมัติ</li>
+          <li><b>เลือกช่องบันทึกเกม (Save Slot 1–3):</b> ระบบรองรับการบันทึกข้อมูลแยกกันได้ 3 ช่องในรูปแบบไฟล์ JSON</li>
+        </ol>
+      </div>
+
+      <figure class="shot">
+        <button type="button" data-zoom="images/g02.jpg" data-caption="ภาพที่ ฉ.2 หน้าจอสร้างและปรับแต่งตัวละครนักศึกษา">
+          <span class="fig-tag">ภาพที่ ฉ.2 · สร้างตัวละคร</span>
+          <img src="images/g02.jpg" width="1280" height="720" alt="หน้าจอสร้างและปรับแต่งตัวละครนักศึกษา">
+        </button>
+        <figcaption>
+          <b>หน้าจอสร้างตัวละคร (Character Customization)</b>
+          ปรับแต่งชื่อ เพศ ทรงผม สีผม สีผิว และเครื่องประดับก่อนก้าวเข้าสู่วันจันทร์ในรั้ววิทยาลัย
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 2. ปุ่มควบคุมบน PC และ Android -->
+    <section class="grid-2">
+      <div class="panel">
+        <span class="label">ขั้นตอนที่ 2 · การควบคุมบนคอมพิวเตอร์ (Windows)</span>
+        <h2>⌨️ ปุ่มควบคุมด้วยคีย์บอร์ดและเมาส์</h2>
         <dl class="keys">
-          <div><dt><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> หรือ <kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd></dt><dd>เดิน</dd></div>
-          <div><dt><kbd>Shift</kbd></dt><dd>วิ่ง (ใช้แรงมากขึ้น)</dd></div>
-          <div><dt><kbd>E</kbd></dt><dd>โต้ตอบ เช่น เปิดประตู นั่งโต๊ะเรียน ซื้อของ ขึ้นรถ</dd></div>
-          <div><dt><kbd>Esc</kbd></dt><dd>หยุดเกม และเปิดเมนูบันทึก</dd></div>
+          <div>
+            <dt><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> หรือ <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd></dt>
+            <dd>บังคับตัวละครเดิน 4 ทิศทาง (ความเร็วปกติ 215 พิกเซล/วินาที)</dd>
+          </div>
+          <div>
+            <dt><kbd>E</kbd> หรือ <kbd>Enter</kbd></dt>
+            <dd>โต้ตอบ พูดคุยกับครู/เพื่อน เข้าห้องเรียน ซื้ออาหาร ขึ้น–ลงบันได หรือเก็บขยะ</dd>
+          </div>
+          <div>
+            <dt><kbd>T</kbd></dt>
+            <dd>เปิด / ปิด <strong>หน้าต่างตารางเรียนประจำสัปดาห์</strong></dd>
+          </div>
+          <div>
+            <dt><kbd>B</kbd></dt>
+            <dd>เปิด / ปิด <strong>แผนที่ใหญ่ของวิทยาลัย (World Map)</strong></dd>
+          </div>
+          <div>
+            <dt><kbd>G</kbd></dt>
+            <dd>เปิด / ปิด <strong>สมุดสะสมการ์ด (Card Collection 30 ใบ)</strong></dd>
+          </div>
+          <div>
+            <dt><kbd>J</kbd> และ <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd></dt>
+            <dd>โจมตีปกติ (<kbd>J</kbd>) และใช้สกิลท่าไม้ตาย (<kbd>1</kbd>–<kbd>4</kbd>) ในโหมดต่อสู้และสนามประลอง</dd>
+          </div>
+          <div>
+            <dt><kbd>Esc</kbd></dt>
+            <dd>เปิดเมนูหยุดเกมชั่วคราว บันทึกเกม หรือตั้งค่าระบบเสียง</dd>
+          </div>
         </dl>
       </div>
+
       <div class="panel">
-        <span class="label">มือถือ</span>
-        <h2>ปุ่มบนหน้าจอสัมผัส</h2>
-        <dl class="keys">
-          <div><dt><b>จอยสติ๊กด้านซ้าย</b></dt><dd>ลากเพื่อเดินไปทุกทิศ</dd></div>
-          <div><dt><b>ปุ่มโต้ตอบด้านขวา</b></dt><dd>ใช้แทนปุ่ม E</dd></div>
-          <div><dt><b>ปุ่มวิ่งด้านขวา</b></dt><dd>ใช้แทนปุ่ม Shift</dd></div>
-          <div><dt><b>ปุ่มหยุด</b> กลางด้านบน</dt><dd>หยุดเกมชั่วคราว</dd></div>
-        </dl>
-        <p class="note" style="margin-top:14px">เกมแสดงผลแนวนอน 1280 x 720 หมุนมือถือเป็นแนวนอนก่อนเล่น</p>
+        <span class="label">ขั้นตอนที่ 2 · การควบคุมบนสมาร์ตโฟน (Android)</span>
+        <h2>📱 ปุ่มควบคุมแบบสัมผัสบนหน้าจอมือถือ</h2>
+        <p style="margin-top: 0;">สำหรับผู้เล่นบนระบบปฏิบัติการแอนดรอยด์ ตัวเกมได้ออกแบบปุ่มควบคุมบนหน้าจอสัมผัส (Touch HUD) ที่ได้รับคะแนนความพึงพอใจด้านการควบคุมสูงสุด ($\bar{X} = 4.57$):</p>
+        <ul class="clean">
+          <li><b>🕹️ จอยสติ๊กจำลองด้านซ้ายล่าง (Virtual Joystick):</b> ลากนิ้วเพื่อบังคับทิศทางการเดินของตัวละครได้อย่างลื่นไหล 360 องศา</li>
+          <li><b>🖐️ ปุ่มโต้ตอบด้านขวาล่าง (ปุ่ม E / คุย / เข้าเรียน):</b> จะปรากฏขึ้นพร้อมข้อความบอกสถานะเมื่อเดินเข้าใกล้ประตูห้องเรียน ร้านค้า บันได หรือตัวละคร NPC</li>
+          <li><b>📅 ปุ่มไอคอนตารางเรียนและแผนที่มุมขวาบน:</b> แตะที่แผนที่ย่อหรือปุ่มตารางเรียนเพื่อดูห้องเรียนและเวลาของคาบถัดไปได้ทันที</li>
+          <li><b>⚔️ ปุ่มสกิลต่อสู้ในสนามประลอง:</b> เมื่อเข้าสู่การต่อสู้กับบอสลับ ระบบจะแสดงปุ่มโจมตีและปุ่มสกิล 1–4 ที่มุมขวาล่างโดยอัตโนมัติ</li>
+          <li><b>👆 การเล่นมินิเกมด้วยนิ้วสัมผัส:</b> รองรับการแตะเลือกคำตอบ การลากชิ้นส่วนกราฟิกใส่ช่อง และการพิมพ์พรอมต์บนหน้าจอมือถือโดยตรง</li>
+        </ul>
       </div>
     </section>
 
-    <section class="panel">
-      <span class="label">หน้าจอ</span>
-      <h2>อ่านหน้าจอขณะเล่น</h2>
+    <!-- 3. การอ่านหน้าจอ HUD -->
+    <section class="grid-2">
+      <figure class="shot">
+        <button type="button" data-zoom="images/shot2.jpg" data-caption="ส่วนประกอบบนหน้าจอขณะเล่น (HUD) แสดงวัน เวลา เงิน ความอิ่ม และแผนที่ย่อ">
+          <span class="fig-tag">คลิกเพื่อดูภาพขยาย</span>
+          <img src="images/shot2.jpg" width="1280" height="720" loading="lazy" alt="ส่วนประกอบหน้าจอ HUD ขณะเล่น">
+        </button>
+        <figcaption>
+          <b>ส่วนประกอบหน้าจอหลักขณะเล่น (In-Game HUD)</b>
+          จัดวางข้อมูลสำคัญไว้ที่มุมซ้ายบนและมุมขวาบน เพื่อไม่ให้บดบังทัศนวิสัยในการเดินสำรวจ
+        </figcaption>
+      </figure>
+
+      <div class="panel">
+        <span class="label">ขั้นตอนที่ 3 · การอ่านข้อมูลบนหน้าจอ (HUD)</span>
+        <h2>ทำความเข้าใจแถบสถานะทั้ง 5 ส่วน</h2>
+        <ol class="steps">
+          <li><b>ป้ายวันและเวลา (มุมซ้ายบน):</b> แสดงวันปัจจุบัน (จันทร์–ศุกร์) และเวลาในเกม (06:00–16:30 น.) โดย 1 วินาทีจริงเท่ากับ 1 นาทีในเกม</li>
+          <li><b>จำนวนเงินคงเหลือ (บาท):</b> แสดงยอดเงินปัจจุบัน (เริ่มต้น 100 บาท) ใช้สำหรับซื้ออาหารในโรงอาหารและร้านค้า</li>
+          <li><b>หลอดค่าความอิ่ม (0–100 หน่วย):</b> ลดลงวินาทีละ 0.13 หน่วย หากลดต่ำกว่า 20 หน่วย หลอดจะกะพริบเตือนและตัวละครจะเดินช้าลงเหลือ 55%</li>
+          <li><b>ป้ายแจ้งเตือนคาบเรียนปัจจุบัน:</b> แจ้งชื่อรายวิชา เลขห้องเรียน และเวลาสิ้นสุดคาบ เพื่อนำทางผู้เล่นไปยังอาคารเรียนได้ถูกต้อง</li>
+          <li><b>แผนที่ย่อ (Minimap มุมขวาบน):</b> แสดงตำแหน่งตัวละคร อาคารเรียน โรงอาหาร และจุดหมายสำคัญแบบเรียลไทม์</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. แผนผังการทำงานจากบทที่ 3 ของเล่มโครงงาน -->
+    <section>
+      <div class="sec-head">
+        <div>
+          <span class="label">บทที่ 3 · แผนผังการออกแบบระบบ</span>
+          <h2 class="on-grass">แผนผังลำดับการทำงานของเกมและขั้นตอนการดำเนินงานโครงงาน</h2>
+          <p>ภาพแผนผังจากรายงานโครงงาน บทที่ 3 (ภาพที่ 3.1 และ ภาพที่ 3.2) คลิกที่ภาพเพื่อดูขนาดเต็ม</p>
+        </div>
+      </div>
+
       <div class="grid-2">
         <figure class="shot">
-  <button type="button" data-zoom="images/shot3.jpg" data-caption="หน้าจอขณะเล่นในแผนที่" aria-label="ดูภาพใหญ่: หน้าจอขณะเล่นในแผนที่"><img src="images/shot3.jpg" alt="หน้าจอขณะเล่นในแผนที่" width="1280" height="720" loading="lazy"></button>
-  <figcaption><b>หน้าจอขณะเล่นในแผนที่</b></figcaption>
-</figure>
+          <button type="button" data-zoom="images/flow-game.png" data-caption="ภาพที่ 3.2 แผนผังลำดับการทำงานของเกม (Game Operation Flowchart) จากบทที่ 3">
+            <span class="fig-tag">ภาพที่ 3.2 · ลำดับการทำงานของเกม</span>
+            <img src="images/flow-game.png" width="900" height="600" loading="lazy" style="object-fit: contain; background: #fff;" alt="แผนผังลำดับการทำงานของเกม">
+          </button>
+          <figcaption>
+            <b>ภาพที่ 3.2 ลำดับการทำงานของเกม (Flowchart)</b>
+            แสดงวงจรการทำงานตั้งแต่หน้าจอหลัก การเดินสำรวจ การตรวจสอบเวลาเรียน การเล่นมินิเกม การคำนวณค่าความอิ่ม ไปจนถึงการสรุปเกรดวันศุกร์
+          </figcaption>
+        </figure>
+
+        <figure class="shot">
+          <button type="button" data-zoom="images/flow-project.png" data-caption="ภาพที่ 3.1 แผนผังขั้นตอนการดำเนินงานโครงงาน 7 ขั้นตอน จากบทที่ 3">
+            <span class="fig-tag">ภาพที่ 3.1 · ขั้นตอนการดำเนินงานโครงงาน</span>
+            <img src="images/flow-project.png" width="900" height="600" loading="lazy" style="object-fit: contain; background: #fff;" alt="แผนผังขั้นตอนการดำเนินงานโครงงาน">
+          </button>
+          <figcaption>
+            <b>ภาพที่ 3.1 ขั้นตอนการดำเนินงานโครงงาน</b>
+            ประกอบด้วย 7 ขั้นตอน: ศึกษาข้อมูล → วิเคราะห์และออกแบบ → พัฒนาเกมด้วย Godot 4 → ตรวจสอบคุณภาพ → ทดลองใช้จริง → ประเมินความพึงพอใจ → จัดทำรูปเล่มรายงาน
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 5. เทคนิคการเล่นให้ได้เกรด S -->
+    <section class="panel maroon-frame">
+      <span class="label maroon">เคล็ดลับจากทีมผู้พัฒนา (Pro Tips)</span>
+      <h2>5 เทคนิคพิชิตเกรด S ในสัปดาห์แรก</h2>
+      <div class="grid-2" style="margin-top: 12px;">
         <ul class="clean">
-          <li><b>มุมซ้ายบน</b> กล่องภารกิจบอกว่าต้องทำอะไรต่อ และจำนวนภารกิจวันนี้</li>
-          <li><b>แผนที่ย่อ</b> ใต้กล่องภารกิจ ซูมเข้าออกด้วยปุ่ม + และ −</li>
-          <li><b>มุมขวาบน</b> วันและเวลาในเกม พร้อมแถบเวลาของวัน</li>
-          <li><b>เงิน</b> แสดงเป็นบาท ใต้นาฬิกา</li>
-          <li><b>ปุ่มโทรศัพท์</b> ใต้ช่องเงิน ใช้ฝากถอนเงินและโทรหาแม่ <b>ปุ่มกระเป๋า</b> ดูของที่มีติดตัว</li>
-          <li><b>หลอดแรงและหลอดความหิว</b> ด้านขวา คอยดูไม่ให้หมด</li>
+          <li><b>1. จำชั้นของห้องเรียนให้แม่น:</b> รหัสห้องขึ้นต้นด้วย <b>31xx</b> อยู่ชั้น 1 (3105), <b>32xx</b> อยู่ชั้น 2 (3204, 3205) และ <b>33xx</b> อยู่ชั้น 3 (3305, 3307, 3308)</li>
+          <li><b>2. ออกเดินไปอาคารเรียนตั้งแต่ 08:00 น. และ 12:35 น.:</b> อย่ารอจนถึงเวลาเริ่มคาบ เพราะการเดินขึ้นบันไดไปชั้น 3 ต้องใช้เวลา</li>
+          <li><b>3. บริหารงบอาหารให้เหลือ ≥ 50 บาท:</b> เงื่อนไขเกรด S ต้องเข้าเรียนครบอย่างน้อย 9 คาบ <em>และ</em> มีเงินเหลือตั้งแต่ 50 บาทขึ้นไป แนะนำให้ซื้อข้าวไข่เจียว (30 บาท) หรือชาเย็น (15 บาท) สลับกับการทำงานพิเศษ</li>
+        </ul>
+        <ul class="clean">
+          <li><b>4. อย่าปล่อยให้ความอิ่มต่ำกว่า 20 หน่วย:</b> หากตัวละครหิวจนเดินช้าลงกลางทาง อาจทำให้ไปเข้าเรียนคาบบ่ายไม่ทันเวลา</li>
+          <li><b>5. ระวังกิจกรรมบ่ายวันศุกร์ (13:45–15:35 น.):</b> กิจกรรมเก็บขยะ 10 จุดรอบโดมกิจกรรม <em>เวลาจะไม่หยุดเดิน</em> ต้องรีบไปคุยกับครูที่โดมทันทีเมื่อเริ่มคาบ</li>
         </ul>
       </div>
     </section>
 
-    <section class="grid-2">
-      <div class="panel">
-        <span class="label">เคล็ดลับ</span>
-        <h2>เล่นให้ได้เกรดดี</h2>
-        <ul class="clean">
-          <li>ซื้อสมุดและปากกาไว้ก่อน เพราะต้องใช้ในคาบเรียน</li>
-          <li>อย่าใช้เงินหมดตั้งแต่เช้า เก็บไว้กินข้าวเที่ยงด้วย</li>
-          <li>ถ้าหลอดแรงใกล้หมด ให้พักหรือดื่มชาเย็น อย่าวิ่งตลอดเวลา</li>
-          <li>ทำมินิเกมให้ได้ระดับ Perfect หรือ Great เพื่อรับเงินรางวัล</li>
-          <li>เลิกเรียนแล้วรีบไปจุดรถรับส่ง รถรอแค่ 30 นาที</li>
-          <li>เกมบันทึกให้ทุกต้นวัน และบันทึกเองได้อีก 3 ช่องจากเมนูหยุดเกม</li>
-        </ul>
-      </div>
-      <div class="panel">
-        <span class="label">จบสัปดาห์</span>
-        <h2>เกรดที่ได้</h2>
-        <div class="table-scroll"><table>
-<thead><tr><th>เกรด</th><th class="num">คะแนน</th><th>ความหมาย</th></tr></thead>
-<tbody><tr><td><span class="grade g-s">S</span></td><td class="num">100</td><td>นักศึกษาดีเด่น</td></tr>
-<tr><td><span class="grade">A</span></td><td class="num">85–99</td><td>ยอดเยี่ยม</td></tr>
-<tr><td><span class="grade">B</span></td><td class="num">65–84</td><td>ดีมาก</td></tr>
-<tr><td><span class="grade">C</span></td><td class="num">45–64</td><td>พอใช้</td></tr>
-<tr><td><span class="grade">D</span></td><td class="num">25–44</td><td>ต้องปรับปรุง</td></tr>
-<tr><td><span class="grade g-f">F</span></td><td class="num">ต่ำกว่า 25</td><td>ต้องพยายามใหม่</td></tr></tbody></table></div>
-      </div>
-    </section>
   </div>
-</div>
-<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="ดูภาพขยาย">
-  <button class="btn light close" type="button">ปิด</button>
-  <figure><img src="" alt=""><figcaption></figcaption>
-    <div class="nav-arrows"><button class="btn light prev" type="button">ก่อนหน้า</button><button class="btn light next" type="button">ถัดไป</button></div>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="ภาพขนาดใหญ่" hidden>
+  <button type="button" class="btn light close">✕ ปิด (Esc)</button>
+  <figure>
+    <img src="images/g01.jpg" alt="">
+    <figcaption></figcaption>
+    <div class="nav-arrows">
+      <button type="button" class="btn light prev">← ภาพก่อนหน้า</button>
+      <button type="button" class="btn light next">ภาพถัดไป →</button>
+    </div>
   </figure>
 </div>
-</main>
+
 <footer>
   <div class="wrap">
-    <div><b>CollegeLifeSim</b> · เกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา · Demo 1.0.4</div>
-    <div>โครงงานนักศึกษา ปวส. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล ห้อง สบค.11 · วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ต.ไพรพัฒนา อ.ภูสิงห์ จ.ศรีสะเกษ</div>
-    <div>ผู้จัดทำ: นายอัษฎาวุฒิ รัตนพันธ์ · นายวราวุธ ธิวะโต · นางสาวสใบทิพย์ แสงเพ็ง</div>
+    <div>
+      <b>โครงงานเกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา (CollegeLifeSim)</b><br>
+      จัดทำโดย นายอัษฎาวุฒิ รัตนพันธ์ · นายวราวุธ ธิวะโต · นางสาวสใบทิพย์ แสงเพ็ง (นักศึกษาระดับชั้น ปวส. ห้อง สบค.11)<br>
+      ครูที่ปรึกษาโครงงาน: นางสาวดวงดาว แสวงทรง · ครูผู้สอน: นายประกิจจ์ ทองมา<br>
+      สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา อำเภอภูสิงห์ จังหวัดศรีสะเกษ ปีการศึกษา 2569
+    </div>
+    <div class="footer-links">
+      <a href="index.html">หน้าแรก</a>
+      <a href="gameplay.html">ระบบเกม</a>
+      <a href="howto.html">วิธีเล่น</a>
+      <a href="gallery.html">ภาพและเทรลเลอร์</a>
+      <a href="download.html">ดาวน์โหลด</a>
+      <a href="about.html">ผู้จัดทำและเล่มโครงงาน</a>
+    </div>
   </div>
 </footer>
-<script src="site.js"></script>
+
+<script src="site.js" defer></script>
 </body>
 </html>

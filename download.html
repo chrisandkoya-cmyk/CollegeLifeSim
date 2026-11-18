@@ -1,106 +1,220 @@
 <!doctype html>
 <html lang="th">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ดาวน์โหลด · CollegeLifeSim</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="ดาวน์โหลด CollegeLifeSim Demo 1.0.4 สำหรับ Windows และ Android">
-<link rel="icon" href="images/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600&display=swap">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ดาวน์โหลด — CollegeLifeSim เกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</title>
+  <meta name="description" content="ดาวน์โหลดเกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา (CollegeLifeSim รุ่น Demo 1.0.4) สำหรับคอมพิวเตอร์ Windows (.exe) และโทรศัพท์มือถือ Android (.apk)">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700;800&family=Mitr:wght@400;500;600&family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="index.html"><img src="images/logo.png" alt="" width="40" height="42"><b>CollegeLifeSim</b></a>
-    <div class="clock" aria-label="นาฬิกาในเกม 1 นาทีในเกมเท่ากับ 1 วินาทีจริง" title="นาฬิกาในเกม: 1 นาทีในเกม = 1 วินาทีจริง"><span class="day">จันทร์</span><span class="time">06:00</span></div>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">เมนู</button>
-    <nav class="nav" id="nav" aria-label="เมนูหลัก"><a href="index.html">หน้าแรก</a><a href="gameplay.html">ระบบเกม</a><a href="howto.html">วิธีเล่น</a><a href="gallery.html">ภาพในเกม</a><a href="download.html" aria-current="page">ดาวน์โหลด</a><a href="about.html">ผู้จัดทำ</a></nav>
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" width="42" height="42" alt="โลโก้เกม CollegeLifeSim">
+      <div class="brand-text">
+        <b>CollegeLifeSim</b>
+        <small>วท.หลวงปู่สรวงวัดไพรพัฒนา · สบค.11</small>
+      </div>
+    </a>
+    <div class="clock" title="เวลาในเกมจำลอง (1 นาทีในเกม = 1 วินาทีจริง)">
+      <span class="day">จันทร์</span>
+      <span class="time">08:15</span>
+    </div>
+    <button class="menu-btn" type="button" aria-expanded="false">☰ เมนู</button>
+    <nav class="nav" aria-label="เมนูหลัก">
+      <a href="index.html">หน้าแรก</a>
+      <a href="gameplay.html">ระบบเกม</a>
+      <a href="howto.html">วิธีเล่น</a>
+      <a href="gallery.html">ภาพและเทรลเลอร์</a>
+      <a href="download.html" class="nav-cta" aria-current="page">ดาวน์โหลด</a>
+      <a href="about.html">ผู้จัดทำและเล่มโครงงาน</a>
+    </nav>
   </div>
 </header>
-<main>
+
 <section class="page-head">
-  <div class="sun" aria-hidden="true" style="width:110px;height:110px;top:14px;right:10%"></div>
+  <div class="sun" aria-hidden="true"></div>
   <div class="cloud c1" aria-hidden="true"></div>
-  <div class="wrap"><h1>ดาวน์โหลดเกม</h1><p>Demo 1.0.4 เล่นฟรี เลือกตามเครื่องที่ใช้ หรือสแกน QR ด้วยมือถือ</p></div>
+  <div class="wrap">
+    <span class="badge green">DOWNLOAD GAME · รุ่นล่าสุด Demo 1.0.4</span>
+    <h1>ดาวน์โหลดและติดตั้งเกม CollegeLifeSim</h1>
+    <p>ดาวน์โหลดฟรีทั้งสำหรับคอมพิวเตอร์ระบบ Windows (.exe) และสมาร์ตโฟนระบบ Android (.apk) พร้อมสแกนคิวอาร์โค้ดได้ทันที</p>
+  </div>
   <div class="ground" aria-hidden="true"></div>
 </section>
-<div class="ground-section">
+
+<main class="ground-section">
   <div class="wrap">
+
+    <!-- การ์ดดาวน์โหลด Windows และ Android -->
     <section class="grid-2">
-      <div class="panel dl">
-        <div class="qr"><img src="images/qr-pc.svg" alt="QR โค้ดดาวน์โหลดเกมสำหรับคอมพิวเตอร์" width="170" height="170"><img class="mid" src="images/logo.png" alt=""></div>
-        <div>
-          <span class="chip pc">PC</span>
-          <h3>คอมพิวเตอร์</h3>
-          <p class="meta">Windows 64 บิต · ไฟล์ติดตั้ง .exe · ประมาณ 44 MB</p>
-          <a class="btn green" href="https://drive.google.com/file/d/16qTSNKwZT8BayKzvQgAT1zbp7n6wDLpw/view?usp=drivesdk" target="_blank" rel="noopener">ดาวน์โหลดสำหรับ Windows</a>
+      <div class="panel">
+        <div class="dl">
+          <div class="qr">
+            <img src="images/qr-pc.svg" width="220" height="220" alt="คิวอาร์โค้ดดาวน์โหลดเกมสำหรับ Windows">
+            <img class="mid" src="images/logo.png" width="48" height="48" alt="">
+          </div>
+          <div>
+            <span class="chip pc">💻 คอมพิวเตอร์ (Windows)</span>
+            <h3>ตัวติดตั้งสำหรับ Windows</h3>
+            <p class="meta">
+              ไฟล์ติดตั้งอัตโนมัติ (<code>CollegeLifeSim_Setup_1.0.4.exe</code>)<br>
+              ขนาดไฟล์ประมาณ <b>44 MB</b> · รองรับ Windows 10 / 11 (64-bit)
+            </p>
+            <a class="btn green" href="https://drive.google.com/file/d/16qTSNKwZT8BayKzvQgAT1zbp7n6wDLpw/view?usp=drivesdk" target="_blank" rel="noopener">⬇ ดาวน์โหลดไฟล์ .exe (Google Drive)</a>
+          </div>
         </div>
       </div>
-      <div class="panel dl">
-        <div class="qr"><img src="images/qr-android.svg" alt="QR โค้ดดาวน์โหลดเกมสำหรับมือถือ Android" width="170" height="170"><img class="mid" src="images/logo.png" alt=""></div>
-        <div>
-          <span class="chip android">Android</span>
-          <h3>มือถือ</h3>
-          <p class="meta">Android · ไฟล์ .apk · ประมาณ 108 MB</p>
-          <a class="btn green" href="https://drive.google.com/file/d/1OzXv1cabJnCq6frO2QZRTJ4zDDMwFcJG/view?usp=drivesdk" target="_blank" rel="noopener">ดาวน์โหลดสำหรับ Android</a>
+
+      <div class="panel">
+        <div class="dl">
+          <div class="qr">
+            <img src="images/qr-android.svg" width="220" height="220" alt="คิวอาร์โค้ดดาวน์โหลดเกมสำหรับ Android">
+            <img class="mid" src="images/logo.png" width="48" height="48" alt="">
+          </div>
+          <div>
+            <span class="chip android">📱 สมาร์ตโฟน (Android)</span>
+            <h3>ไฟล์ติดตั้งสำหรับ Android</h3>
+            <p class="meta">
+              ไฟล์แพ็กเกจแอนดรอยด์ (<code>CollegeLifeSim.apk</code>)<br>
+              ขนาดไฟล์ประมาณ <b>108 MB</b> · รองรับ Android 8.0 ขึ้นไป
+            </p>
+            <a class="btn green" href="https://drive.google.com/file/d/1OzXv1cabJnCq6frO2QZRTJ4zDDMwFcJG/view?usp=drivesdk" target="_blank" rel="noopener">⬇ ดาวน์โหลดไฟล์ .apk (Google Drive)</a>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ขั้นตอนการติดตั้ง -->
     <section class="grid-2">
       <div class="panel">
-        <span class="label">Windows</span>
-        <h2>ติดตั้งบนคอมพิวเตอร์</h2>
+        <span class="label">คู่มือการติดตั้งบนคอมพิวเตอร์</span>
+        <h2>💻 วิธีติดตั้งบนระบบปฏิบัติการ Windows</h2>
         <ol class="steps">
-          <li>กดปุ่มดาวน์โหลด จะเปิดหน้า Google Drive แล้วกดปุ่มดาวน์โหลดด้านบน</li>
-          <li>ถ้า Drive แจ้งว่าสแกนไวรัสไม่ได้เพราะไฟล์ใหญ่ ให้กด <b>ดาวน์โหลดต่อ</b></li>
-          <li>เปิดไฟล์ CollegeLifeSim_Setup_1.0.4.exe</li>
-          <li>ถ้า Windows ขึ้นหน้าต่างสีฟ้า ให้กด <b>ข้อมูลเพิ่มเติม</b> แล้วกด <b>เรียกใช้ต่อ</b></li>
-          <li>ทำตามขั้นตอนติดตั้ง แล้วเปิดเกมจากไอคอนบนเดสก์ท็อปหรือเมนูเริ่ม</li>
+          <li>คลิกปุ่ม <strong>ดาวน์โหลดไฟล์ .exe</strong> ด้านบน หรือสแกนคิวอาร์โค้ดเพื่อดาวน์โหลดไฟล์ <code>CollegeLifeSim_Setup_1.0.4.exe</code> จาก Google Drive</li>
+          <li>ดับเบิลคลิกเปิดไฟล์ที่ดาวน์โหลดมา หากหน้าต่าง Windows SmartScreen แจ้งเตือน ให้คลิก <strong>More info (ข้อมูลเพิ่มเติม)</strong> แล้วกดปุ่ม <strong>Run anyway (เรียกใช้ต่อไป)</strong></li>
+          <li>ทำตามขั้นตอนของตัวติดตั้ง (สามารถเลือกสร้างไอคอนทางลัดบนหน้าจอ Desktop ได้)</li>
+          <li>เมื่อติดตั้งเสร็จสมบูรณ์ ให้ดับเบิลคลิกไอคอน <strong>CollegeLifeSim</strong> บนหน้าจอเพื่อเริ่มเล่นได้ทันทีโดยไม่ต้องเชื่อมต่ออินเทอร์เน็ต</li>
         </ol>
       </div>
+
       <div class="panel">
-        <span class="label">Android</span>
-        <h2>ติดตั้งบนมือถือ</h2>
+        <span class="label">คู่มือการติดตั้งบนโทรศัพท์มือถือ</span>
+        <h2>📱 วิธีติดตั้งบนระบบปฏิบัติการ Android</h2>
         <ol class="steps">
-          <li>สแกน QR หรือกดปุ่มดาวน์โหลด แล้วดาวน์โหลดไฟล์ CollegeLifeSim_Demo1.0.4.apk</li>
-          <li>เปิดไฟล์ที่ดาวน์โหลดมา</li>
-          <li>ถ้ามือถือถาม ให้อนุญาต <b>ติดตั้งแอปที่ไม่รู้จัก</b> สำหรับเบราว์เซอร์หรือแอปไฟล์ที่ใช้เปิด</li>
-          <li>กด <b>ติดตั้ง</b> แล้วเปิดเกม CollegeLifeSim</li>
-          <li>ถ้าเคยลงเวอร์ชัน 1.0.3 ไว้ ติดตั้งทับได้เลย</li>
+          <li>ใช้กล้องโทรศัพท์มือถือสแกนคิวอาร์โค้ดฝั่ง Android หรือกดปุ่ม <strong>ดาวน์โหลดไฟล์ .apk</strong> เพื่อบันทึกไฟล์ <code>CollegeLifeSim.apk</code> ลงในเครื่อง</li>
+          <li>แตะเปิดไฟล์ <code>CollegeLifeSim.apk</code> จากแถบแจ้งเตือนหรือแอปจัดการไฟล์ (File Manager)</li>
+          <li>หากระบบสอบถามสิทธิ์ความปลอดภัย ให้เลือก <strong>การตั้งค่า (Settings) → อนุญาตให้ติดตั้งแอปจากแหล่งที่ไม่รู้จัก (Allow from this source)</strong></li>
+          <li>กดปุ่ม <strong>ติดตั้ง (Install)</strong> รอสักครู่แล้วกด <strong>เปิด (Open)</strong> ตัวเกมจะปรับเข้าสู่มุมมองแนวนอนพร้อมปุ่มสัมผัสบนหน้าจอโดยอัตโนมัติ</li>
         </ol>
       </div>
     </section>
 
+    <!-- สเปกเครื่องขั้นต่ำ & เครื่องมือที่ใช้พัฒนา (บทที่ 3 หัวข้อ 3.1) -->
+    <section class="grid-2">
+      <div class="panel">
+        <span class="label">ความต้องการของระบบ (System Requirements)</span>
+        <h2>คุณสมบัติอุปกรณ์ที่รองรับการเล่นเกม</h2>
+        <div class="grid-2" style="gap: 14px;">
+          <dl class="spec">
+            <dt>💻 คอมพิวเตอร์ (Windows PC)</dt>
+            <div><dd class="k">ระบบปฏิบัติการ</dd><dd>Windows 10 / 11 (64-bit)</dd></div>
+            <div><dd class="k">หน่วยประมวลผล</dd><dd>Dual-Core 2.0 GHz ขึ้นไป</dd></div>
+            <div><dd class="k">หน่วยความจำ</dd><dd>RAM 4 GB ขึ้นไป</dd></div>
+            <div><dd class="k">กราฟิก</dd><dd>รองรับ OpenGL 3.3 / Direct3D</dd></div>
+            <div><dd class="k">พื้นที่ว่าง</dd><dd>อย่างน้อย 250 MB</dd></div>
+          </dl>
+
+          <dl class="spec">
+            <dt>📱 สมาร์ตโฟน (Android)</dt>
+            <div><dd class="k">ระบบปฏิบัติการ</dd><dd>Android 8.0 (Oreo) ขึ้นไป</dd></div>
+            <div><dd class="k">หน่วยความจำ</dd><dd>RAM 3 GB ขึ้นไป (แนะนำ 4 GB)</dd></div>
+            <div><dd class="k">หน้าจอ</dd><dd>หน้าจอสัมผัสแนวนอน 16:9 หรือใกล้เคียง</dd></div>
+            <div><dd class="k">พื้นที่ว่าง</dd><dd>อย่างน้อย 300 MB</dd></div>
+            <div><dd class="k">เครือข่าย</dd><dd>เล่นแบบออฟไลน์ได้ 100%</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="panel">
+        <span class="label">บทที่ 3 หัวข้อ 3.1 · เครื่องมือที่ใช้ในการพัฒนา</span>
+        <h2>ฮาร์ดแวร์และซอฟต์แวร์ที่ใช้พัฒนาโครงงาน</h2>
+        <ul class="clean">
+          <li><b>เครื่องคอมพิวเตอร์ที่ใช้พัฒนา:</b> ซีพียู AMD Ryzen 7 260 (3.80 GHz) · การ์ดจอ NVIDIA GeForce RTX 5060 Laptop GPU ร่วมกับ AMD Radeon 780M · RAM 16 GB · พื้นที่เก็บข้อมูล 477 GB · ระบบปฏิบัติการ Windows 11 (64-bit)</li>
+          <li><b>สมาร์ตโฟนที่ใช้ทดสอบระบบแอนดรอยด์:</b> โทรศัพท์มือถือระบบปฏิบัติการแอนดรอยด์ของคณะผู้จัดทำ จำนวน 3 เครื่อง</li>
+          <li><b>โปรแกรมพัฒนาเกมหลัก:</b> โปรแกรม <strong>Godot Engine 4 (รุ่น 4.6)</strong> และชุดคำสั่งภาษา <strong>GDScript</strong> (จำนวน 52 สคริปต์ 26,337 บรรทัด)</li>
+          <li><b>โปรแกรมออกแบบกราฟิกและเอกสาร:</b> Adobe Photoshop, Canva, Microsoft Word และ Google Forms (สำหรับเก็บรวบรวมข้อมูลความพึงพอใจ)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ประวัติการอัปเดตรุ่นของเกม -->
     <section class="panel">
-      <span class="label">เครื่องที่เล่นได้</span>
-      <h2>ความต้องการของระบบ</h2>
-      <div class="grid-2">
-        <dl class="spec"><dt>คอมพิวเตอร์</dt>
-          <div><dd class="k">ระบบ</dd><dd>Windows 64 บิต</dd></div>
-          <div><dd class="k">การแสดงผล</dd><dd>การ์ดจอทั่วไปก็เล่นได้ (โหมด Compatibility)</dd></div>
-          <div><dd class="k">การควบคุม</dd><dd>คีย์บอร์ด</dd></div>
-        </dl>
-        <dl class="spec"><dt>มือถือ</dt>
-          <div><dd class="k">ระบบ</dd><dd>Android (ทดสอบบน Android 13)</dd></div>
-          <div><dd class="k">การแสดงผล</dd><dd>รองรับมือถือรุ่นเก่า ทั้ง ARMv7 และ ARM64</dd></div>
-          <div><dd class="k">การควบคุม</dd><dd>จอสัมผัส ถือแนวนอน</dd></div>
-        </dl>
+      <span class="label">บันทึกการพัฒนาและอัปเดตเวอร์ชัน (Changelog)</span>
+      <h2>ประวัติการพัฒนาตั้งแต่รุ่นต้นแบบถึงรุ่นสมบูรณ์ (Demo 0.2 – Demo 1.0.4)</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>เวอร์ชัน</th>
+              <th>สถานะ</th>
+              <th>รายละเอียดการพัฒนาและปรับปรุงระบบ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><b>Demo 1.0.4</b> <small>(ปัจจุบัน)</small></td>
+              <td>รุ่นสมบูรณ์พร้อมส่งมอบ</td>
+              <td>ปรับปรุงประสิทธิภาพการแสดงผลทั้งบน Windows (.exe) และ Android (.apk) เพิ่มโหมดสนามประลองแมพพิเศษ (บลู ราชาทองคำ) คัตซีนท่าไม้ตาย วิดีโอเทรลเลอร์ทางการ และแผ่นติดตั้ง CD-ROM Autorun (<code>CollegeLifeSim_CD_1.0.4.iso</code>)</td>
+            </tr>
+            <tr>
+              <td><b>Demo 1.0.2 – 1.0.3</b></td>
+              <td>อัปเดตเนื้อหาเสริม</td>
+              <td>เพิ่มระบบสร้างตัวละครจากภาพถ่าย (Photo-to-NPC) ทรงผม 35 แบบ เครื่องประดับ 67 ชิ้น ระบบการ์ดสะสม 30 ใบ และฉากจบครบ 11 รูปแบบ</td>
+            </tr>
+            <tr>
+              <td><b>Demo 0.75 – 0.9</b></td>
+              <td>ทดสอบกลุ่มตัวอย่าง</td>
+              <td>ครบทั้ง 9 คาบเรียน มินิเกมประจำวิชา 7 รูปแบบ กิจกรรมองค์การวิชาชีพวันศุกร์ ระบบบันทึกเกม 3 ช่อง และนำไปทดลองใช้กับกลุ่มตัวอย่างนักศึกษา ปวส. จำนวน 27 คน</td>
+            </tr>
+            <tr>
+              <td><b>Demo 0.2 – 0.5</b></td>
+              <td>รุ่นต้นแบบ (Prototype)</td>
+              <td>วางโครงสร้างแผนที่วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา อาคารเรียน 3 ชั้น โรงอาหาร ระบบเวลา 06:00–16:30 น. และระบบความหิว</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <p class="note" style="margin-top:16px">นี่คือเวอร์ชันทดลอง (Demo) สร้างเป็นโครงงานของนักศึกษา ดาวน์โหลดได้จากลิงก์ในหน้านี้เท่านั้น</p>
     </section>
+
   </div>
-</div>
 </main>
+
 <footer>
   <div class="wrap">
-    <div><b>CollegeLifeSim</b> · เกมจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา · Demo 1.0.4</div>
-    <div>โครงงานนักศึกษา ปวส. สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล ห้อง สบค.11 · วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ต.ไพรพัฒนา อ.ภูสิงห์ จ.ศรีสะเกษ</div>
-    <div>ผู้จัดทำ: นายอัษฎาวุฒิ รัตนพันธ์ · นายวราวุธ ธิวะโต · นางสาวสใบทิพย์ แสงเพ็ง</div>
+    <div>
+      <b>โครงงานเกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา (CollegeLifeSim)</b><br>
+      จัดทำโดย นายอัษฎาวุฒิ รัตนพันธ์ · นายวราวุธ ธิวะโต · นางสาวสใบทิพย์ แสงเพ็ง (นักศึกษาระดับชั้น ปวส. ห้อง สบค.11)<br>
+      ครูที่ปรึกษาโครงงาน: นางสาวดวงดาว แสวงทรง · ครูผู้สอน: นายประกิจจ์ ทองมา<br>
+      สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา อำเภอภูสิงห์ จังหวัดศรีสะเกษ ปีการศึกษา 2569
+    </div>
+    <div class="footer-links">
+      <a href="index.html">หน้าแรก</a>
+      <a href="gameplay.html">ระบบเกม</a>
+      <a href="howto.html">วิธีเล่น</a>
+      <a href="gallery.html">ภาพและเทรลเลอร์</a>
+      <a href="download.html">ดาวน์โหลด</a>
+      <a href="about.html">ผู้จัดทำและเล่มโครงงาน</a>
+    </div>
   </div>
 </footer>
-<script src="site.js"></script>
+
+<script src="site.js" defer></script>
 </body>
 </html>
