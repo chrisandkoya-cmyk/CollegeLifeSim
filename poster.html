@@ -51,14 +51,13 @@
     }
 
     :root {
-      --sky-top: #1f5ea8;
-      --sky-mid: #4d9be6;
+      --sky-top: #1d5ba6;
+      --sky-mid: #4a9ae8;
       --sky-low: #bfe3fb;
       --grass: #5ca63c;
       --grass-hi: #72be4e;
       --grass-dark: #3b7323;
-      --dirt: #8e5c2e;
-      --dirt-dark: #5e3b1b;
+      --dirt-dark: #4e2f14;
       --cream: #fff8e4;
       --cream-2: #faecc2;
       --wood: #a86b36;
@@ -78,7 +77,7 @@
       margin: 0;
       padding: 0;
       background: #231307;
-      font-family: "Sarabun", sans-serif;
+      font-family: "Mitr", "Sarabun", sans-serif;
       color: var(--ink);
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
@@ -92,7 +91,7 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 220px, var(--sky-low) 390px, var(--grass) 390px, #4e9331 1555px, var(--dirt-dark) 1555px);
+      background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 210px, var(--sky-low) 355px, var(--grass) 355px, #4d9130 1445px, var(--dirt-dark) 1445px);
       border: 10px solid var(--wood-deep);
       box-shadow: inset 0 0 0 4px var(--gold);
     }
@@ -100,13 +99,13 @@
     /* Decorative Sun & Clouds */
     .sun {
       position: absolute;
-      width: 140px;
-      height: 140px;
+      width: 144px;
+      height: 144px;
       border-radius: 50%;
       background: radial-gradient(circle, #fff6b3 0%, #ffd859 72%);
-      box-shadow: 0 0 0 16px rgba(255, 226, 122, 0.25), 0 0 48px rgba(255, 212, 71, 0.5);
+      box-shadow: 0 0 0 18px rgba(255, 226, 122, 0.26), 0 0 54px rgba(255, 212, 71, 0.5);
       top: 22px;
-      right: 54px;
+      right: 52px;
       z-index: 0;
     }
     .cloud {
@@ -121,20 +120,20 @@
       background: rgba(255, 255, 255, 0.88);
       border-radius: 50%;
     }
-    .cloud.c1 { width: 160px; height: 44px; top: 48px; right: 165px; }
-    .cloud.c1::before { width: 72px; height: 72px; left: 22px; top: -34px; }
-    .cloud.c1::after { width: 56px; height: 56px; left: 78px; top: -22px; }
+    .cloud.c1 { width: 165px; height: 46px; top: 50px; right: 168px; }
+    .cloud.c1::before { width: 74px; height: 74px; left: 22px; top: -35px; }
+    .cloud.c1::after { width: 58px; height: 58px; left: 80px; top: -22px; }
 
-    .cloud.c2 { width: 130px; height: 38px; top: 38px; left: 40px; opacity: 0.72; }
-    .cloud.c2::before { width: 60px; height: 60px; left: 18px; top: -28px; }
-    .cloud.c2::after { width: 46px; height: 46px; left: 62px; top: -18px; }
+    .cloud.c2 { width: 135px; height: 38px; top: 38px; left: 38px; opacity: 0.75; }
+    .cloud.c2::before { width: 62px; height: 62px; left: 18px; top: -28px; }
+    .cloud.c2::after { width: 48px; height: 48px; left: 64px; top: -18px; }
 
     /* Grass texture overlay */
     .grass-pattern {
       position: absolute;
-      inset: 380px 0 145px 0;
+      inset: 350px 0 250px 0;
       background-image:
-        radial-gradient(rgba(255, 255, 255, 0.08) 2px, transparent 2px),
+        radial-gradient(rgba(255, 255, 255, 0.09) 2px, transparent 2px),
         radial-gradient(rgba(0, 0, 0, 0.06) 1.5px, transparent 1.6px);
       background-size: 36px 36px, 18px 18px;
       background-position: 0 0, 9px 9px;
@@ -146,7 +145,7 @@
     .content {
       position: relative;
       z-index: 2;
-      padding: 20px 32px 18px;
+      padding: 20px 30px 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -157,27 +156,27 @@
     .header-box {
       display: flex;
       align-items: center;
-      gap: 20px;
-      background: rgba(24, 62, 110, 0.28);
-      border: 2.5px solid rgba(255, 248, 228, 0.45);
-      border-radius: 16px;
-      padding: 12px 18px;
+      gap: 22px;
+      background: rgba(22, 58, 104, 0.28);
+      border: 3px solid rgba(255, 248, 228, 0.5);
+      border-radius: 18px;
+      padding: 12px 20px;
     }
     .logos {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       flex-shrink: 0;
     }
     .logos img.seal {
-      width: 112px;
-      height: 112px;
+      width: 118px;
+      height: 118px;
       object-fit: contain;
       filter: drop-shadow(0 5px 0 rgba(40, 20, 5, 0.45));
     }
     .logos img.game-logo {
-      width: 110px;
-      height: 110px;
+      width: 116px;
+      height: 116px;
       object-fit: contain;
       image-rendering: pixelated;
       filter: drop-shadow(0 5px 0 rgba(40, 20, 5, 0.45));
@@ -186,58 +185,36 @@
       flex: 1;
       min-width: 0;
     }
-    .top-badges {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 6px;
-      align-items: center;
-    }
-    .badge {
-      font-family: "Mitr", sans-serif;
-      font-size: 13.8px;
-      font-weight: 500;
-      padding: 3px 11px;
-      border-radius: 7px;
-      background: var(--maroon);
-      color: var(--gold-hi);
-      border: 2px solid var(--maroon-dark);
-      box-shadow: 0 3px 0 rgba(0, 0, 0, 0.25);
-      white-space: nowrap;
-    }
-    .badge.wood {
-      background: var(--wood-dark);
-      color: #fff;
-      border-color: var(--wood-deep);
-    }
     .main-title-row {
       display: flex;
       align-items: center;
       gap: 14px;
+      margin-bottom: 2px;
     }
     .game-title {
       font-family: "Kanit", sans-serif;
       font-weight: 800;
-      font-size: 56px;
-      line-height: 0.98;
+      font-size: 66px;
+      line-height: 0.95;
       margin: 0;
       color: #ffffff;
       letter-spacing: -0.5px;
       text-shadow:
-        3px 3px 0 var(--wood-deep),
-        -3px 3px 0 var(--wood-deep),
-        3px -3px 0 var(--wood-deep),
-        -3px -3px 0 var(--wood-deep),
-        0 6px 0 var(--wood-deep);
+        3.5px 3.5px 0 var(--wood-deep),
+        -3.5px 3.5px 0 var(--wood-deep),
+        3.5px -3.5px 0 var(--wood-deep),
+        -3.5px -3.5px 0 var(--wood-deep),
+        0 7px 0 var(--wood-deep);
     }
     .ver-pill {
       font-family: "Mitr", sans-serif;
-      font-size: 14.5px;
+      font-size: 16px;
       font-weight: 600;
       background: var(--gold);
       color: var(--ink);
-      border: 2.5px solid var(--wood-deep);
+      border: 3px solid var(--wood-deep);
       border-radius: 999px;
-      padding: 3px 14px;
+      padding: 4px 16px;
       box-shadow: 0 3px 0 var(--wood-deep);
       white-space: nowrap;
     }
@@ -245,9 +222,9 @@
       font-family: "Kanit", sans-serif;
       font-weight: 700;
       font-size: 25px;
-      line-height: 1.22;
+      line-height: 1.2;
       color: var(--gold);
-      margin: 5px 0 2px;
+      margin: 4px 0 8px;
       white-space: nowrap;
       text-shadow:
         2px 2px 0 var(--wood-deep),
@@ -256,74 +233,23 @@
         -2px -2px 0 var(--wood-deep),
         0 4px 0 var(--wood-deep);
     }
-    .en-sub {
+    .tagline-pill {
+      display: inline-block;
       font-family: "Mitr", sans-serif;
-      font-size: 13.8px;
-      color: #fff9e6;
-      text-shadow: 1.5px 1.5px 0 var(--wood-deep);
-      margin: 0;
-      white-space: nowrap;
-    }
-
-    /* 2. INTRO & STATS STRIP */
-    .intro-bar {
-      background: var(--cream);
-      border: 4px solid var(--wood-deep);
-      border-radius: 14px;
-      box-shadow: inset 0 0 0 3px var(--cream-2), 0 6px 0 var(--wood-deep);
-      padding: 12px 18px;
-      display: grid;
-      grid-template-columns: 1.22fr 1fr;
-      gap: 16px;
-      align-items: center;
-    }
-    .intro-text {
-      font-family: "Sarabun", sans-serif;
       font-size: 16.5px;
-      line-height: 1.48;
-      margin: 0;
-      color: var(--ink);
-      font-weight: 600;
-    }
-    .intro-text b {
+      font-weight: 500;
+      background: var(--cream);
       color: var(--maroon);
-      font-weight: 700;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-    }
-    .stat-box {
-      background: linear-gradient(180deg, #fffdf6 0%, var(--cream-2) 100%);
-      border: 2.5px solid var(--wood-dark);
+      border: 2.5px solid var(--wood-deep);
       border-radius: 10px;
-      padding: 8px 6px;
-      text-align: center;
+      padding: 4px 14px;
       box-shadow: 0 3px 0 var(--wood-deep);
     }
-    .stat-box b {
-      display: block;
-      font-family: "Kanit", sans-serif;
-      font-weight: 800;
-      font-size: 21.5px;
-      line-height: 1.1;
-      color: var(--maroon);
-      white-space: nowrap;
-    }
-    .stat-box span {
-      display: block;
-      font-family: "Mitr", sans-serif;
-      font-size: 11.8px;
-      color: var(--ink-soft);
-      margin-top: 2px;
-      white-space: nowrap;
-    }
 
-    /* 3. SCREENSHOTS SHOWCASE + 4 PILLARS */
-    .middle-grid {
+    /* 2. VISUAL SHOWCASE + PUNCHY HIGHLIGHTS */
+    .showcase-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.18fr 0.82fr;
       gap: 16px;
       align-items: stretch;
     }
@@ -331,28 +257,26 @@
     .shots-panel {
       background: var(--wood-dark);
       border: 4px solid var(--wood-deep);
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 11px;
       box-shadow: inset 0 2px 0 var(--wood-hi), 0 6px 0 var(--wood-deep);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 9px;
+      gap: 10px;
     }
     .shot-main {
       position: relative;
       border: 3px solid var(--gold);
-      border-radius: 9px;
+      border-radius: 10px;
       overflow: hidden;
       background: #000;
       flex: 1;
     }
     .shot-main img {
       width: 100%;
-      height: 100%;
-      max-height: 256px;
+      height: 245px;
       object-fit: cover;
-      object-position: center;
       display: block;
     }
     .shot-cap {
@@ -362,96 +286,95 @@
       background: rgba(43, 22, 6, 0.92);
       color: var(--gold-hi);
       border: 2px solid var(--gold);
-      border-radius: 6px;
-      padding: 2px 10px;
+      border-radius: 7px;
+      padding: 3px 12px;
       font-family: "Mitr", sans-serif;
-      font-size: 13px;
+      font-size: 14px;
     }
     .shots-sub-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 9px;
+      gap: 10px;
     }
     .shot-sub {
       position: relative;
       border: 2.5px solid var(--cream-2);
-      border-radius: 8px;
+      border-radius: 9px;
       overflow: hidden;
       background: #000;
     }
     .shot-sub img {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      height: 122px;
       object-fit: cover;
       display: block;
     }
     .shot-sub span {
       position: absolute;
-      left: 6px;
-      bottom: 5px;
+      left: 7px;
+      bottom: 6px;
       background: rgba(43, 22, 6, 0.9);
       color: #fff;
       border: 1.5px solid var(--gold);
       border-radius: 5px;
-      padding: 1px 8px;
+      padding: 2px 9px;
       font-family: "Mitr", sans-serif;
-      font-size: 11.2px;
+      font-size: 12.5px;
     }
 
     .features-col {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 9px;
+      gap: 10px;
     }
     .feat-card {
       background: var(--cream);
-      border: 3.5px solid var(--wood-deep);
-      border-radius: 12px;
-      padding: 11px 14px;
-      box-shadow: inset 0 0 0 2.5px var(--cream-2), 0 5px 0 var(--wood-deep);
+      border: 4px solid var(--wood-deep);
+      border-radius: 14px;
+      padding: 12px 16px;
+      box-shadow: inset 0 0 0 3px var(--cream-2), 0 5px 0 var(--wood-deep);
       display: flex;
-      gap: 12px;
-      align-items: flex-start;
+      gap: 14px;
+      align-items: center;
       flex: 1;
     }
-    .feat-num {
-      width: 34px;
-      height: 34px;
-      border-radius: 8px;
-      background: var(--maroon);
+    .feat-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, var(--maroon) 0%, var(--maroon-dark) 100%);
       color: var(--gold-hi);
-      border: 2.5px solid var(--wood-deep);
-      font-family: "Kanit", sans-serif;
-      font-weight: 800;
-      font-size: 19px;
+      border: 3px solid var(--wood-deep);
+      font-size: 28px;
       display: grid;
       place-items: center;
       flex-shrink: 0;
-      margin-top: 2px;
+      box-shadow: 0 3px 0 var(--wood-deep);
     }
     .feat-card h3 {
       font-family: "Kanit", sans-serif;
-      font-weight: 700;
-      font-size: 18.5px;
-      margin: 0 0 3px;
+      font-weight: 800;
+      font-size: 23px;
+      margin: 0 0 2px;
       color: var(--maroon);
-      line-height: 1.2;
+      line-height: 1.15;
     }
     .feat-card p {
       margin: 0;
-      font-size: 14.6px;
-      line-height: 1.42;
+      font-family: "Mitr", sans-serif;
+      font-size: 15.5px;
+      line-height: 1.35;
       color: var(--ink);
-      font-weight: 600;
+      font-weight: 400;
     }
 
-    /* 4. QR CODE SCAN SECTION (THE STAR OF THE POSTER) */
+    /* 3. QR CODE SCAN SECTION (BIG & EASY TO SCAN) */
     .qr-banner {
-      background: linear-gradient(180deg, #5b1212 0%, #3d0a0a 100%);
+      background: linear-gradient(180deg, #631313 0%, #3d0909 100%);
       border: 4px solid var(--gold);
-      border-radius: 16px;
-      padding: 12px 18px 14px;
+      border-radius: 18px;
+      padding: 13px 20px 16px;
       box-shadow: 0 7px 0 var(--wood-deep), 0 12px 24px rgba(0, 0, 0, 0.35);
       color: var(--cream);
     }
@@ -459,15 +382,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       border-bottom: 2px dashed rgba(255, 212, 71, 0.45);
-      padding-bottom: 7px;
+      padding-bottom: 8px;
       gap: 12px;
     }
     .qr-banner-head h2 {
       font-family: "Kanit", sans-serif;
       font-weight: 800;
-      font-size: 23.5px;
+      font-size: 25px;
       margin: 0;
       color: var(--gold);
       text-shadow: 2px 2px 0 #1f0404;
@@ -475,10 +398,10 @@
     }
     .qr-banner-head span {
       font-family: "Mitr", sans-serif;
-      font-size: 13.5px;
+      font-size: 14px;
       background: var(--gold);
       color: var(--ink);
-      padding: 3px 14px;
+      padding: 4px 15px;
       border-radius: 999px;
       font-weight: 600;
       white-space: nowrap;
@@ -486,31 +409,33 @@
     .qr-cards-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+      gap: 16px;
       align-items: stretch;
     }
     .qr-card {
       background: var(--cream);
       border: 3.5px solid var(--wood-deep);
-      border-radius: 12px;
-      padding: 11px 13px;
+      border-radius: 14px;
+      padding: 12px 14px;
       color: var(--ink);
-      display: grid;
-      grid-template-columns: 154px minmax(0, 1fr);
-      grid-template-rows: 1fr auto;
-      gap: 8px 12px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      box-shadow: inset 0 0 0 2.5px var(--cream-2), 0 4px 0 #210505;
+      text-align: center;
+      justify-content: space-between;
+      gap: 8px;
+      box-shadow: inset 0 0 0 3px var(--cream-2), 0 5px 0 #210505;
     }
     .qr-box {
-      width: 154px;
-      height: 154px;
+      width: 184px;
+      height: 184px;
       background: #fffaf0;
       border: 3px solid var(--wood-deep);
-      border-radius: 10px;
-      padding: 6px;
+      border-radius: 12px;
+      padding: 8px;
       position: relative;
       flex-shrink: 0;
+      box-shadow: 0 3px 0 rgba(0, 0, 0, 0.14);
     }
     .qr-box img.qr-svg {
       width: 100%;
@@ -521,29 +446,25 @@
     }
     .qr-box img.qr-logo {
       position: absolute;
-      width: 28px;
-      height: 28px;
+      width: 34px;
+      height: 34px;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       background: #fffaf0;
-      border-radius: 5px;
+      border-radius: 6px;
       padding: 2px;
     }
     .qr-info {
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      width: 100%;
     }
     .qr-info .tag {
       display: inline-block;
-      width: fit-content;
       font-family: "Mitr", sans-serif;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 600;
       color: #fff;
-      padding: 2px 9px;
+      padding: 2px 12px;
       border-radius: 999px;
       margin-bottom: 4px;
       white-space: nowrap;
@@ -554,95 +475,121 @@
     .qr-info h4 {
       font-family: "Kanit", sans-serif;
       font-weight: 800;
-      font-size: 18px;
-      margin: 0 0 4px;
-      line-height: 1.18;
+      font-size: 21.5px;
+      margin: 0 0 2px;
+      line-height: 1.15;
       color: var(--ink);
+      white-space: nowrap;
     }
     .qr-info p {
       margin: 0;
-      font-size: 13.4px;
-      line-height: 1.4;
+      font-family: "Mitr", sans-serif;
+      font-size: 14px;
+      line-height: 1.35;
       color: var(--ink-soft);
-      font-weight: 600;
+      font-weight: 500;
     }
     .qr-card .url-chip {
-      grid-column: 1 / -1;
+      width: 100%;
       display: block;
       text-align: center;
       background: var(--wood-dark);
       color: var(--gold-hi);
       border: 2px solid var(--wood-deep);
       font-family: "Mitr", sans-serif;
-      font-size: 12.2px;
-      padding: 3px 8px;
-      border-radius: 6px;
+      font-size: 13px;
+      padding: 4px 8px;
+      border-radius: 7px;
       white-space: nowrap;
     }
 
-    /* 5. FOOTER: CREATORS & ADVISORS */
+    /* 4. FOOTER: LARGE PORTRAIT PHOTOS OF CREATORS & ADVISORS */
     .footer-bar {
       background: var(--cream);
       border: 4px solid var(--wood-deep);
-      border-radius: 14px;
-      padding: 9px 14px;
-      box-shadow: inset 0 0 0 2.5px var(--cream-2), 0 5px 0 #261405;
-      display: grid;
-      grid-template-columns: 3.18fr 1.82fr;
-      gap: 12px;
-      align-items: center;
+      border-radius: 16px;
+      padding: 12px 16px 14px;
+      box-shadow: inset 0 0 0 3px var(--cream-2), 0 6px 0 #261405;
     }
-    .group-title {
-      font-family: "Kanit", sans-serif;
-      font-weight: 700;
-      font-size: 14.2px;
-      color: var(--maroon);
-      margin: 0 0 5px;
-      white-space: nowrap;
-    }
-    .people-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 7px;
-    }
-    .advisors-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 7px;
-    }
-    .mini-person {
+    .footer-head {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 6px;
-      background: #fffdf7;
-      border: 2px solid var(--wood-dark);
-      border-radius: 8px;
-      padding: 4px 6px;
-      min-width: 0;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #ecd39d;
     }
-    .mini-person img {
-      width: 36px;
-      height: 46px;
+    .footer-head b {
+      font-family: "Kanit", sans-serif;
+      font-weight: 800;
+      font-size: 19px;
+      color: var(--maroon);
+    }
+    .footer-head span {
+      font-family: "Mitr", sans-serif;
+      font-size: 14.5px;
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+    .all-people-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .person-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(180deg, #fffdf8 0%, var(--cream-2) 100%);
+      border: 2.5px solid var(--wood-dark);
+      border-radius: 12px;
+      padding: 10px 8px 9px;
+      box-shadow: 0 3px 0 var(--wood-deep);
+    }
+    .person-box img {
+      width: 108px;
+      height: 132px;
       object-fit: cover;
       object-position: top center;
-      border-radius: 5px;
-      border: 1.5px solid var(--wood-deep);
-      flex-shrink: 0;
+      border-radius: 9px;
+      border: 3px solid var(--wood-deep);
+      background: var(--sky-mid);
+      box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+      margin-bottom: 7px;
     }
-    .mini-person b {
+    .person-box .role-pill {
+      font-family: "Mitr", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      background: var(--maroon);
+      color: var(--gold-hi);
+      padding: 1px 10px;
+      border-radius: 999px;
+      margin-bottom: 4px;
+      white-space: nowrap;
+    }
+    .person-box .role-pill.advisor {
+      background: var(--wood-dark);
+      color: #fff;
+    }
+    .person-box b {
       display: block;
       font-family: "Kanit", sans-serif;
-      font-size: 12.4px;
+      font-weight: 700;
+      font-size: 16px;
       line-height: 1.2;
       color: var(--ink);
       white-space: nowrap;
     }
-    .mini-person span {
+    .person-box span {
       display: block;
-      font-size: 11.2px;
-      line-height: 1.25;
+      font-family: "Sarabun", sans-serif;
+      font-size: 13.5px;
+      line-height: 1.3;
       color: var(--ink-soft);
-      font-weight: 600;
+      font-weight: 700;
+      margin-top: 2px;
       white-space: nowrap;
     }
 
@@ -669,108 +616,79 @@
         <img class="game-logo" src="images/logo.png" alt="โลโก้เกม CollegeLifeSim">
       </div>
       <div class="title-col">
-        <div class="top-badges">
-          <span class="badge">🎓 โครงงานวิชาชีพ ปวส. สบค.11 · สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล (ปีการศึกษา 2569)</span>
-          <span class="badge wood">⚙️ Godot Engine 4.6 · GDScript</span>
-        </div>
         <div class="main-title-row">
           <h1 class="game-title">CollegeLifeSim</h1>
-          <span class="ver-pill">🎮 รุ่นสมบูรณ์ Demo 1.0.4 (Windows &amp; Android)</span>
+          <span class="ver-pill">🎮 เล่นฟรีทั้ง PC &amp; มือถือ Android (Demo 1.0.4)</span>
         </div>
         <div class="thai-title">เกมเรื่องจำลองการใช้ชีวิตในวิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</div>
-        <p class="en-sub">CollegeLifeSim: A College Life Simulation Game of Luang Pu Suang Wat Phrai Phatthana Technological College</p>
+        <span class="tagline-pill">✨ สวมบทเด็ก ปวส. ใช้ชีวิตในรั้ววิทยาลัย 5 วันเต็ม! เข้าเรียน · เล่นมินิเกม · กินข้าว · ลุยบอสลับ · ลุ้นเกรด S–F</span>
       </div>
     </header>
 
-    <!-- 2. INTRO & KEY STATS -->
-    <section class="intro-bar">
-      <p class="intro-text">
-        สวมบทบาทนักศึกษาใหม่ ใช้ชีวิตการเรียนในรั้ว <b>วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา</b> อ.ภูสิงห์ จ.ศรีสะเกษ ตลอด <b>5 วันทำการ (จันทร์–ศุกร์ 06:00–16:30 น.)</b> สำรวจแผนที่อาคารเรียน 3 ชั้น โรงอาหาร โดมกิจกรรม และสนามฟุตบอลด้วยมุมมอง <b>Isometric 2D</b> เข้าเรียนตามตารางจริง 9 คาบ เล่นมินิเกมประจำวิชา 7 รูปแบบ บริหารเงินและค่าสถานะ เพื่อพิชิตเกรดเฉลี่ยปลายสัปดาห์
-      </p>
-      <div class="stats-grid">
-        <div class="stat-box">
-          <b>5 วัน</b>
-          <span>จันทร์–ศุกร์</span>
-        </div>
-        <div class="stat-box">
-          <b>7 มินิเกม</b>
-          <span>9 คาบเรียนจริง</span>
-        </div>
-        <div class="stat-box">
-          <b>11 ฉากจบ</b>
-          <span>เกรด S ถึง F</span>
-        </div>
-        <div class="stat-box">
-          <b>90.00%</b>
-          <span>ความพึงพอใจ (X̄=4.50)</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. SCREENSHOTS & 4 KEY FEATURES -->
-    <section class="middle-grid">
+    <!-- 2. SCREENSHOTS & 4 EASY-TO-READ HIGHLIGHTS -->
+    <section class="showcase-grid">
       <div class="shots-panel">
         <div class="shot-main">
-          <img src="images/shot3.jpg" alt="หน้าจอหลักขณะเล่นและการสำรวจแผนที่วิทยาลัย">
-          <span class="shot-cap">🏫 สำรวจแผนที่วิทยาลัยแบบ Isometric 2D พร้อมหน้าจอ HUD แสดงเวลาและค่าสถานะ</span>
+          <img src="images/shot3.jpg" alt="สำรวจแผนที่วิทยาลัย">
+          <span class="shot-cap">🏫 เดินสำรวจวิทยาลัยแบบ Isometric 2D ที่คุ้นตา</span>
         </div>
         <div class="shots-sub-grid">
           <div class="shot-sub">
             <img src="images/shot1.jpg" alt="หน้าจอเมนูหลัก">
-            <span>1. หน้าจอเมนูหลักและสร้างตัวละคร</span>
+            <span>🎮 หน้าเมนูหลักและสร้างตัวละคร</span>
           </div>
           <div class="shot-sub">
             <img src="images/shot4.jpg" alt="มินิเกมวิชาเรียน">
-            <span>2. มินิเกมวิชาโปรแกรมกราฟิก (Photoshop)</span>
+            <span>💻 มินิเกมวิชาเรียนสุดสนุก</span>
           </div>
           <div class="shot-sub">
-            <img src="images/g08.jpg" alt="กิจกรรมเข้าแถวหน้าเสาธง">
-            <span>3. กิจกรรมเข้าแถวเคารพธงชาติหน้าโดม</span>
+            <img src="images/arena-fight.jpg" alt="ดวลบอสลับ">
+            <span>⚔️ ดวลบอสลับและท่าอัลติเมตสุดเท่</span>
           </div>
           <div class="shot-sub">
-            <img src="images/shot6.jpg" alt="หน้าจอสรุปผลการเรียน">
-            <span>4. สรุปผลการเรียนและตัดเกรดปลายสัปดาห์</span>
+            <img src="images/shot6.jpg" alt="สรุปเกรดปลายสัปดาห์">
+            <span>🏆 ลุ้นเกรดปลายสัปดาห์ (S ถึง F)</span>
           </div>
         </div>
       </div>
 
       <div class="features-col">
         <div class="feat-card">
-          <div class="feat-num">1</div>
+          <div class="feat-icon">🏫</div>
           <div>
-            <h3>จำลองสถานที่และตารางเรียนจริงของห้อง สบค.11</h3>
-            <p>ถอดแบบอาคารเรียน 3 ชั้น (ห้อง 3304, 3305, 3202, 3102) โรงอาหาร โดมกิจกรรม สนามฟุตบอล ร้านมินิมาร์ท ร้านชาตาหนวด และจุดรถรับส่ง พร้อมระบบเช็คชื่อเข้าแถวเวลา 08:00 น.</p>
+            <h3>สำรวจวิทยาลัยที่คุ้นเคย</h3>
+            <p>เดินเล่นทั่วอาคารเรียน 3 ชั้น โรงอาหาร โดมกิจกรรม สนามฟุตบอล ร้านมินิมาร์ท และร้านชาตาหนวด</p>
           </div>
         </div>
         <div class="feat-card">
-          <div class="feat-num">2</div>
+          <div class="feat-icon">🎯</div>
           <div>
-            <h3>มินิเกมฝึกทักษะวิชาชีพดิจิทัล 7 รูปแบบ</h3>
-            <p>ครอบคลุมวิชาโปรแกรมกราฟิก (Photoshop), การเขียนโปรแกรม (Dev-C++), สั่งงานพรอมต์ AI, สร้างเว็บไซต์ (Google Sites), ข้อสอบวิชาการ, มินิเกมกดจังหวะ และภารกิจเก็บขยะวันศุกร์</p>
+            <h3>7 มินิเกมวิชาเรียน ไม่จำเจ</h3>
+            <p>แต่งรูป Photoshop · เขียนโค้ด · สั่งงาน AI · สร้างเว็บ · ตอบคำถาม · กดจังหวะดนตรี · เก็บขยะวันศุกร์</p>
           </div>
         </div>
         <div class="feat-card">
-          <div class="feat-num">3</div>
+          <div class="feat-icon">⚔️</div>
           <div>
-            <h3>บริหารค่าสถานะ 4 ด้าน &amp; ระบบเศรษฐกิจในวิทยาลัย</h3>
-            <p>บริหารค่าพลังงาน ความอิ่ม ความสะอาด ความสนุก และเงินเริ่มต้น 100 บาท ซื้ออาหารและไอเทมเสริมพลัง พร้อมระบบสมาร์ตโฟนในเกมสำหรับดูตารางเรียน แผนที่ และบันทึกเกม 5 ช่อง</p>
+            <h3>ใช้ชีวิตอิสระ &amp; ดวลบอสลับสุดเท่</h3>
+            <p>บริหารเงินและพลังงาน ซื้อของกินเติมพลัง คุยกับเพื่อน NPC และท้าดวลบอสลับพร้อมคัตซีนท่าไม้ตาย</p>
           </div>
         </div>
         <div class="feat-card">
-          <div class="feat-num">4</div>
+          <div class="feat-icon">🏆</div>
           <div>
-            <h3>ตัดสินผลการเรียน 11 ฉากจบ &amp; ผลประเมินความพึงพอใจระดับมาก</h3>
-            <p>คำนวณเกรด S, A, B, C, D และ F จากคะแนนเข้าเรียนและวินัย ผลประเมินความพึงพอใจจากกลุ่มตัวอย่าง 27 คน ได้ค่าเฉลี่ยรวม X̄ = 4.50, S.D. = 0.73 (คิดเป็นร้อยละ 90.00)</p>
+            <h3>สะสมฉากจบถึง 11 แบบ (เกรด S–F)</h3>
+            <p>เลือกเส้นทางชีวิตตัวเอง! จะเป็นเด็กเรียนเกรด S หรือสายลุยจนติด F ทุกการกระทำส่งผลต่อฉากจบ</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. SCAN QR CODES: WEBSITE + ANDROID + WINDOWS -->
+    <!-- 3. SCAN QR CODES: WEBSITE + ANDROID + WINDOWS -->
     <section class="qr-banner">
       <div class="qr-banner-head">
-        <h2>📲 สแกนคิวอาร์โค้ดเพื่อเข้าชมเว็บไซต์แนะนำเกม และดาวน์โหลดเกมฟรี!</h2>
-        <span>สแกนด้วยกล้องมือถือได้ทันที · เล่นออฟไลน์ได้ 100%</span>
+        <h2>📲 สแกน QR Code เข้าชมเว็บไซต์ และดาวน์โหลดเกมฟรี!</h2>
+        <span>ใช้กล้องมือถือสแกนได้ทันที · ติดตั้งง่าย · เล่นออฟไลน์ได้ 100%</span>
       </div>
       <div class="qr-cards-grid">
         <!-- QR 1: WEBSITE -->
@@ -780,9 +698,9 @@
             <img class="qr-logo" src="images/college-seal.png" alt="">
           </div>
           <div class="qr-info">
-            <span class="tag web">🌐 เว็บไซต์ทางการ</span>
-            <h4>เข้าชมเว็บไซต์เกม &amp; ชมเทรลเลอร์</h4>
-            <p>ดูข้อมูลระบบเกม วิธีเล่น แกลเลอรีภาพ วิดีโอเทรลเลอร์ 90 วินาที และสรุปเล่มโครงงานครบ 6 หน้า</p>
+            <span class="tag web">🌐 เว็บไซต์แนะนำเกม</span>
+            <h4>เข้าชมเว็บไซต์ &amp; ดูเทรลเลอร์</h4>
+            <p>ชมวิดีโอตัวอย่างเกม วิธีเล่น ภาพในเกม และข้อมูลครบทุกหน้า</p>
           </div>
           <span class="url-chip">🔗 chrisandkoya-cmyk.github.io/CollegeLifeSim</span>
         </div>
@@ -794,11 +712,11 @@
             <img class="qr-logo" src="images/logo.png" alt="">
           </div>
           <div class="qr-info">
-            <span class="tag android">📱 สมาร์ตโฟน Android</span>
+            <span class="tag android">📱 มือถือ Android</span>
             <h4>ดาวน์โหลดเกม (.apk)</h4>
-            <p>ไฟล์ <b>CollegeLifeSim.apk</b><br>รุ่น Demo 1.0.4 · ขนาด 108 MB<br>รองรับระบบ Android 8.0 ขึ้นไป</p>
+            <p>สำหรับสมาร์ตโฟน Android<br>ไฟล์ <b>CollegeLifeSim.apk</b> (108 MB)</p>
           </div>
-          <span class="url-chip">📲 สแกนเพื่อดาวน์โหลดไฟล์ .apk ลงมือถือทันที</span>
+          <span class="url-chip">📲 สแกนเพื่อดาวน์โหลดลงมือถือทันที</span>
         </div>
 
         <!-- QR 3: WINDOWS PC -->
@@ -808,61 +726,51 @@
             <img class="qr-logo" src="images/logo.png" alt="">
           </div>
           <div class="qr-info">
-            <span class="tag pc">💻 คอมพิวเตอร์ Windows</span>
+            <span class="tag pc">💻 คอมพิวเตอร์ PC</span>
             <h4>ดาวน์โหลดเกม (.exe)</h4>
-            <p>ไฟล์ติดตั้งอัตโนมัติ (<b>Setup 1.0.4.exe</b>)<br>รุ่น Demo 1.0.4 · ขนาด 44 MB<br>รองรับ Windows 10 / 11 (64-bit)</p>
+            <p>สำหรับ Windows 10 / 11<br>ตัวติดตั้งอัตโนมัติ (44 MB)</p>
           </div>
-          <span class="url-chip">💻 สแกนเพื่อดาวน์โหลดตัวติดตั้ง .exe สำหรับ PC</span>
+          <span class="url-chip">💻 สแกนเพื่อดาวน์โหลดไฟล์ติดตั้งสำหรับ PC</span>
         </div>
       </div>
     </section>
 
-    <!-- 5. FOOTER: CREATORS & ADVISORS -->
+    <!-- 4. FOOTER: LARGE PHOTOS OF CREATORS & ADVISORS -->
     <footer class="footer-bar">
-      <div>
-        <div class="group-title">👥 คณะผู้จัดทำโครงงาน (ระดับชั้น ปวส. ห้อง สบค.11 สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล)</div>
-        <div class="people-row">
-          <div class="mini-person">
-            <img src="images/creator1.jpg" alt="นายอัษฎาวุฒิ รัตนพันธ์">
-            <div>
-              <b>1. นายอัษฎาวุฒิ รัตนพันธ์</b>
-              <span>รหัสนักศึกษา 69319100406</span>
-            </div>
-          </div>
-          <div class="mini-person">
-            <img src="images/creator2.jpg" alt="นายวราวุธ ธิวะโต">
-            <div>
-              <b>2. นายวราวุธ ธิวะโต</b>
-              <span>รหัสนักศึกษา 69319100403</span>
-            </div>
-          </div>
-          <div class="mini-person">
-            <img src="images/creator3.jpg" alt="นางสาวสใบทิพย์ แสงเพ็ง">
-            <div>
-              <b>3. นางสาวสใบทิพย์ แสงเพ็ง</b>
-              <span>รหัสนักศึกษา 69319100390</span>
-            </div>
-          </div>
-        </div>
+      <div class="footer-head">
+        <b>👥 คณะผู้จัดทำและครูที่ปรึกษาโครงงาน (ปวส. สบค.11 สาขาวิชาเทคโนโลยีธุรกิจดิจิทัล)</b>
+        <span>วิทยาลัยเทคโนโลยีหลวงปู่สรวงวัดไพรพัฒนา ปีการศึกษา 2569</span>
       </div>
-
-      <div>
-        <div class="group-title">🎓 ครูที่ปรึกษาและครูผู้สอนรายวิชาโครงงาน · วท.หลวงปู่สรวงวัดไพรพัฒนา</div>
-        <div class="advisors-row">
-          <div class="mini-person">
-            <img src="images/teacher2.jpg" alt="นางสาวดวงดาว แสวงทรง">
-            <div>
-              <b>นางสาวดวงดาว แสวงทรง</b>
-              <span>ครูที่ปรึกษาโครงงาน</span>
-            </div>
-          </div>
-          <div class="mini-person">
-            <img src="images/teacher1.jpg" alt="นายประกิจจ์ ทองมา">
-            <div>
-              <b>นายประกิจจ์ ทองมา</b>
-              <span>ครูผู้สอนรายวิชาโครงงาน</span>
-            </div>
-          </div>
+      <div class="all-people-grid">
+        <div class="person-box">
+          <img src="images/creator1.jpg" alt="นายอัษฎาวุฒิ รัตนพันธ์">
+          <span class="role-pill">ผู้จัดทำโครงงาน</span>
+          <b>นายอัษฎาวุฒิ รัตนพันธ์</b>
+          <span>รหัสนักศึกษา 69319100406</span>
+        </div>
+        <div class="person-box">
+          <img src="images/creator2.jpg" alt="นายวราวุธ ธิวะโต">
+          <span class="role-pill">ผู้จัดทำโครงงาน</span>
+          <b>นายวราวุธ ธิวะโต</b>
+          <span>รหัสนักศึกษา 69319100403</span>
+        </div>
+        <div class="person-box">
+          <img src="images/creator3.jpg" alt="นางสาวสใบทิพย์ แสงเพ็ง">
+          <span class="role-pill">ผู้จัดทำโครงงาน</span>
+          <b>นางสาวสใบทิพย์ แสงเพ็ง</b>
+          <span>รหัสนักศึกษา 69319100390</span>
+        </div>
+        <div class="person-box">
+          <img src="images/teacher2.jpg" alt="นางสาวดวงดาว แสวงทรง">
+          <span class="role-pill advisor">ครูที่ปรึกษาโครงงาน</span>
+          <b>นางสาวดวงดาว แสวงทรง</b>
+          <span>สาขาเทคโนโลยีธุรกิจดิจิทัล</span>
+        </div>
+        <div class="person-box">
+          <img src="images/teacher1.jpg" alt="นายประกิจจ์ ทองมา">
+          <span class="role-pill advisor">ครูผู้สอนวิชาโครงงาน</span>
+          <b>นายประกิจจ์ ทองมา</b>
+          <span>สาขาเทคโนโลยีธุรกิจดิจิทัล</span>
         </div>
       </div>
     </footer>
